@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python auditv.py)",
+      "Bash(python:*)",
+      "WebFetch(domain:vijaysharmaphysiotherapy.ca)",
+      "WebFetch(domain:activphysio.ca)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:ocphysio.com)",
+      "WebFetch(domain:medisportphysio.com)",
+      "Bash(rm audit_output_activphysio_ca.json audit_output_medisportphysio_com.json audit_output_ocphysio_com.json audit_output_acpottawa_ca.json audit_output_vijaysharmaphysiotherapy_ca.json)",
+      "Bash(ls audit_output_*.json)",
+      "Bash(pip install:*)",
+      "Bash(echo \"Exit code: $?\")",
+      "Read(//tmp/**)"
+    ]
+  }
+}

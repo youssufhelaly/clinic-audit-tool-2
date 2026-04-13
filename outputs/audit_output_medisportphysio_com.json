@@ -1,0 +1,369 @@
+{
+  "url": "https://medisportphysio.com/polyclinic-819-en",
+  "business_name": "Polyclinic 819 EN",
+  "aggregated_signals": {
+    "total_booking_count": 43,
+    "booking_on_homepage": 4,
+    "total_review_count": 1,
+    "all_service_categories": [
+      "Acupuncture",
+      "Manual Therapy",
+      "Massage Therapy",
+      "Pain Treatment",
+      "Pelvic Health",
+      "Physiotherapy",
+      "Sports Rehab",
+      "Wellness / Other"
+    ],
+    "scoring_service_categories": [
+      "Acupuncture",
+      "Manual Therapy",
+      "Massage Therapy",
+      "Pain Treatment",
+      "Pelvic Health",
+      "Physiotherapy",
+      "Sports Rehab",
+      "Wellness / Other"
+    ],
+    "contact": {
+      "phone": true,
+      "email": true,
+      "address": true,
+      "phone_sample": "819-282-7095",
+      "email_sample": "info@msphysio.net"
+    },
+    "insurance_any": true,
+    "insurance_on_key_page": true,
+    "all_locations": [
+      "Gatineau"
+    ],
+    "homepage_locations": [
+      "Gatineau"
+    ],
+    "homepage_title": "Polyclinic 819 EN — MédiSport Physio"
+  },
+  "scores": {
+    "categories": {
+      "Local Relevance": 8,
+      "Services Visibility": 10,
+      "Booking Conversion": 9,
+      "Trust / Reviews": 3,
+      "Contact Completeness": 10,
+      "Insurance / Accessibility": 9
+    },
+    "total": 49,
+    "max": 60
+  },
+  "priority_issues": [
+    {
+      "category": "Trust / Reviews",
+      "score": 3,
+      "max": 10,
+      "explanation": "Testimonials or review signals appear limited. Social proof is a key trust builder for new patients."
+    }
+  ],
+  "page_signals": [
+    {
+      "url": "https://medisportphysio.com/contact",
+      "title": "Contact — MédiSport Physio",
+      "booking_keyword_count": 4,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "819) 775-4303",
+        "email_sample": "info@msphysio.net"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/faq",
+      "title": "MédiSport Physio | Questions Fréquemment Posées — MédiSport Physio",
+      "booking_keyword_count": 3,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "(819) 775-4303",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/faqs",
+      "title": "MédiSport Physio | Frequently Asked Questions — MédiSport Physio",
+      "booking_keyword_count": 4,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "(819) 775-4303",
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 5,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/mdisport-physio-resources",
+      "title": "MédiSport Physio Resources — MédiSport Physio",
+      "booking_keyword_count": 3,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/nous-contacter",
+      "title": "MédiSport Physio | Nous Contacter — MédiSport Physio",
+      "booking_keyword_count": 3,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "819) 775-4303",
+        "email_sample": "info@msphysio.net"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/our-services",
+      "title": "Medisport Physio |  Physiotherapy Clinic Hull Gatineau — MédiSport Physio",
+      "booking_keyword_count": 5,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 4,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/physiotherapie",
+      "title": "MédiSport Physio | Clinique de physiothérapie Hull Gatineau — MédiSport Physio",
+      "booking_keyword_count": 3,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Manual Therapy",
+        "Pelvic Health"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/physiotherapy",
+      "title": "Medisport Physio |  Physiotherapy Clinic Hull Gatineau — MédiSport Physio",
+      "booking_keyword_count": 5,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 4,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/polyclinic-819-en",
+      "title": "Polyclinic 819 EN — MédiSport Physio",
+      "booking_keyword_count": 4,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Pain Treatment"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "819-282-7095",
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 1,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/ressources-mdisport-physio",
+      "title": "Ressources MédiSport Physio — MédiSport Physio",
+      "booking_keyword_count": 3,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/services",
+      "title": "MédiSport Physio | Clinique de physiothérapie Hull Gatineau — MédiSport Physio",
+      "booking_keyword_count": 3,
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Manual Therapy",
+        "Pelvic Health"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    },
+    {
+      "url": "https://medisportphysio.com/team",
+      "title": "Team — MédiSport Physio",
+      "booking_keyword_count": 3,
+      "review_keyword_count": 1,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "locations": [
+        "Gatineau"
+      ]
+    }
+  ],
+  "pages_analyzed": [
+    "https://medisportphysio.com/contact",
+    "https://medisportphysio.com/faq",
+    "https://medisportphysio.com/faqs",
+    "https://medisportphysio.com/mdisport-physio-resources",
+    "https://medisportphysio.com/nous-contacter",
+    "https://medisportphysio.com/our-services",
+    "https://medisportphysio.com/physiotherapie",
+    "https://medisportphysio.com/physiotherapy",
+    "https://medisportphysio.com/polyclinic-819-en",
+    "https://medisportphysio.com/ressources-mdisport-physio",
+    "https://medisportphysio.com/services",
+    "https://medisportphysio.com/team"
+  ]
+}

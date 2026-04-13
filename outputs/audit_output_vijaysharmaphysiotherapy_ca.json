@@ -1,0 +1,507 @@
+{
+  "url": "https://vijaysharmaphysiotherapy.ca/",
+  "business_name": "Downtown Ottawa Physiotherapy",
+  "audit_date": "2026-04-06",
+  "aggregated_signals": {
+    "total_booking_count": 2,
+    "booking_on_homepage": 2,
+    "booking_system_type": "form",
+    "booking_platform_name": null,
+    "booking_platform_on_homepage": false,
+    "has_dedicated_booking_page": false,
+    "booking_cta_on_homepage": true,
+    "total_review_count": 0,
+    "all_service_categories": [
+      "Acupuncture",
+      "Manual Therapy",
+      "Massage Therapy",
+      "Pain Treatment",
+      "Physiotherapy",
+      "Wellness / Other"
+    ],
+    "scoring_service_categories": [
+      "Manual Therapy",
+      "Physiotherapy",
+      "Wellness / Other"
+    ],
+    "service_presentation": {
+      "has_services_page": false,
+      "services_page_url": null,
+      "has_homepage_services": true,
+      "homepage_service_count": 3,
+      "service_count": 3,
+      "services_have_descriptions": false,
+      "services_page_text_length": 0,
+      "has_dedicated_subpages": false,
+      "subpages_found": [],
+      "details": [
+        "No dedicated services page found.",
+        "3 service category(ies) visible on homepage.",
+        "No dedicated sub-pages for individual services (e.g. /services/physiotherapy).",
+        "Total service categories (homepage + services page): 3."
+      ]
+    },
+    "contact": {
+      "phone": true,
+      "email": true,
+      "address": true,
+      "phone_sample": "613-238-8885",
+      "email_sample": "info@vijaysharmaphysiotherapy.ca"
+    },
+    "has_clickable_phone": true,
+    "has_hours": true,
+    "contact_in_header_footer": false,
+    "insurance_any": true,
+    "insurance_on_key_page": true,
+    "insurance_specificity": "vague",
+    "insurance_providers_found": [],
+    "direct_billing_mentioned": false,
+    "insurance_on_homepage": false,
+    "has_review_widget": false,
+    "has_testimonial_content": false,
+    "max_testimonial_count": 0,
+    "has_star_rating": false,
+    "review_platforms_linked": [],
+    "has_gbp_link": false,
+    "has_credentials": true,
+    "has_professional_assoc": true,
+    "has_years_in_practice": true,
+    "all_locations": [
+      "Ottawa"
+    ],
+    "homepage_locations": [
+      "Ottawa"
+    ],
+    "homepage_title": "Downtown Ottawa Physiotherapy - Vijay Sharma Physiotherapy",
+    "city_in_title": true,
+    "neighbourhood_mentioned": true,
+    "google_map_on_contact": false,
+    "has_local_schema": false,
+    "mobile_readiness": {
+      "homepage_has_viewport": true,
+      "any_page_has_viewport": true,
+      "has_media_queries": true,
+      "has_mobile_nav": true,
+      "booking_mobile_accessible": true,
+      "booking_mobile_detail": "Contact form detected — accessible on mobile but high friction.",
+      "total_imgs": 8,
+      "total_imgs_missing_dims": 8,
+      "max_render_blocking_scripts": 3,
+      "max_html_size_bytes": 129297,
+      "heavy_pages": [],
+      "small_font_found": true,
+      "small_tap_found": false,
+      "fixed_wide_pages": [],
+      "findings": [
+        "Viewport meta tag present on homepage — site is configured for mobile.",
+        "Responsive CSS detected (media queries present) — layout likely adapts to mobile screen sizes.",
+        "Mobile navigation pattern detected (hamburger/toggle menu) — mobile navigation is present.",
+        "Contact form detected — accessible on mobile but high friction.",
+        "8 total images across all pages — reasonable image count.",
+        "8 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
+        "Font sizes below 14px detected in inline styles — may be difficult to read on small screens."
+      ]
+    }
+  },
+  "scores": {
+    "categories": {
+      "Local Relevance": 6,
+      "Services Visibility": 4,
+      "Booking Conversion": 4,
+      "Trust / Reviews": 0,
+      "Contact Completeness": 8,
+      "Insurance / Accessibility": 3,
+      "Mobile Readiness": 8
+    },
+    "findings": {
+      "Local Relevance": [
+        "City 'Ottawa' in title and homepage. Address present: True.",
+        "Neighbourhood/area targeting detected on homepage or contact page."
+      ],
+      "Services Visibility": [
+        "Services mentioned on homepage but limited — no services page or fewer than 3 categories.",
+        "No dedicated services page found.",
+        "3 service category(ies) visible on homepage.",
+        "No dedicated sub-pages for individual services (e.g. /services/physiotherapy).",
+        "Total service categories (homepage + services page): 3."
+      ],
+      "Booking Conversion": [
+        "Booking CTA present on homepage, but it leads to a contact form — patients submit and wait for a callback.",
+        "No real-time online booking system found."
+      ],
+      "Trust / Reviews": [
+        "No review, testimonial, or trust signals found anywhere on the site.",
+        "Professional credentials detected on team/about pages — adds trust.",
+        "Years in practice or establishment date mentioned."
+      ],
+      "Contact Completeness": [
+        "Phone, email, and address all present.",
+        "Hours of operation displayed.",
+        "Contact info not found in header/footer — patients must navigate to find it.",
+        "Phone number is clickable (tel: link) — mobile-friendly."
+      ],
+      "Insurance / Accessibility": [
+        "Insurance mentioned on a key page but vague — no providers named, no process explained.",
+        "Patients cannot determine from this site whether their plan is accepted."
+      ],
+      "Mobile Readiness": [
+        "Viewport meta tag present on homepage — site is configured for mobile.",
+        "Responsive CSS detected (media queries present) — layout likely adapts to mobile screen sizes.",
+        "Mobile navigation pattern detected (hamburger/toggle menu) — mobile navigation is present.",
+        "Contact form detected — accessible on mobile but high friction.",
+        "8 total images across all pages — reasonable image count.",
+        "8 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
+        "Font sizes below 14px detected in inline styles — may be difficult to read on small screens."
+      ]
+    },
+    "total": 33,
+    "max": 70
+  },
+  "priority_issues": [
+    {
+      "category": "Trust / Reviews",
+      "score": 0,
+      "max": 10,
+      "findings": [
+        "No review, testimonial, or trust signals found anywhere on the site.",
+        "Professional credentials detected on team/about pages — adds trust.",
+        "Years in practice or establishment date mentioned."
+      ]
+    },
+    {
+      "category": "Insurance / Accessibility",
+      "score": 3,
+      "max": 10,
+      "findings": [
+        "Insurance mentioned on a key page but vague — no providers named, no process explained.",
+        "Patients cannot determine from this site whether their plan is accepted."
+      ]
+    },
+    {
+      "category": "Services Visibility",
+      "score": 4,
+      "max": 10,
+      "findings": [
+        "Services mentioned on homepage but limited — no services page or fewer than 3 categories.",
+        "No dedicated services page found.",
+        "3 service category(ies) visible on homepage.",
+        "No dedicated sub-pages for individual services (e.g. /services/physiotherapy).",
+        "Total service categories (homepage + services page): 3."
+      ]
+    }
+  ],
+  "page_signals": [
+    {
+      "url": "https://vijaysharmaphysiotherapy.ca/",
+      "title": "Downtown Ottawa Physiotherapy - Vijay Sharma Physiotherapy",
+      "visible_text_length": 3352,
+      "booking_keyword_count": 2,
+      "booking_system": {
+        "type": "form",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": true,
+        "call_to_book_language": false,
+        "details": [
+          "Contact form detected — patients submit a form and wait for callback. No real-time online booking system found."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Manual Therapy",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-238-8885",
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 1,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": false
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": true,
+        "details": [
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist').",
+          "Establishment date or years-in-practice language detected."
+        ]
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://vijaysharmaphysiotherapy.ca/",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 7,
+        "imgs_missing_dims": 7,
+        "render_blocking_scripts": 3,
+        "html_size_bytes": 129297
+      }
+    },
+    {
+      "url": "https://vijaysharmaphysiotherapy.ca/about",
+      "title": "About",
+      "visible_text_length": 2591,
+      "booking_keyword_count": 0,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Pain Treatment"
+      ],
+      "contact": {
+        "phone": false,
+        "email": false,
+        "address": true,
+        "phone_sample": null,
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": false,
+        "has_hours": false,
+        "contact_in_header_footer": false
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [],
+        "has_credentials": true,
+        "has_professional_assoc": true,
+        "has_years_in_practice": false,
+        "details": [
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist').",
+          "Professional association mentioned."
+        ]
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://vijaysharmaphysiotherapy.ca/about",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 1,
+        "imgs_missing_dims": 1,
+        "render_blocking_scripts": 3,
+        "html_size_bytes": 61848
+      }
+    },
+    {
+      "url": "https://vijaysharmaphysiotherapy.ca/contact",
+      "title": "Contact",
+      "visible_text_length": 1123,
+      "booking_keyword_count": 0,
+      "booking_system": {
+        "type": "form",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": true,
+        "call_to_book_language": false,
+        "details": [
+          "Contact form detected — patients submit a form and wait for callback. No real-time online booking system found."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "613-238-8885",
+        "email_sample": "info@vijaysharmaphysiotherapy.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": false,
+        "has_hours": true,
+        "contact_in_header_footer": false
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://vijaysharmaphysiotherapy.ca/contact",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 0,
+        "imgs_missing_dims": 0,
+        "render_blocking_scripts": 3,
+        "html_size_bytes": 70597
+      }
+    },
+    {
+      "url": "https://vijaysharmaphysiotherapy.ca/faqs",
+      "title": "FAQS",
+      "visible_text_length": 9058,
+      "booking_keyword_count": 0,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "613-238-8885",
+        "email_sample": "info@vijaysharmaphysiotherapy.ca"
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 15,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": false,
+        "has_hours": false,
+        "contact_in_header_footer": false
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "details": [
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://vijaysharmaphysiotherapy.ca/faqs",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 0,
+        "imgs_missing_dims": 0,
+        "render_blocking_scripts": 3,
+        "html_size_bytes": 85729
+      }
+    }
+  ],
+  "pages_analyzed": [
+    "https://vijaysharmaphysiotherapy.ca/",
+    "https://vijaysharmaphysiotherapy.ca/about",
+    "https://vijaysharmaphysiotherapy.ca/contact",
+    "https://vijaysharmaphysiotherapy.ca/faqs"
+  ]
+}
