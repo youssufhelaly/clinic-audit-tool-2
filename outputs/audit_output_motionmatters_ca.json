@@ -1,0 +1,2477 @@
+{
+  "url": "https://motionmatters.ca/",
+  "business_name": "Ottawa Physiotherapy",
+  "audit_date": "2026-04-30",
+  "aggregated_signals": {
+    "total_booking_count": 17,
+    "booking_on_homepage": 0,
+    "booking_system_type": "form",
+    "booking_platform_name": null,
+    "booking_platform_on_homepage": false,
+    "has_dedicated_booking_page": false,
+    "booking_cta_on_homepage": false,
+    "total_review_count": 0,
+    "all_service_categories": [
+      "Acupuncture",
+      "Manual Therapy",
+      "Massage Therapy",
+      "Pain Treatment",
+      "Pelvic Health",
+      "Physiotherapy",
+      "Sports Rehab",
+      "Wellness / Other"
+    ],
+    "scoring_service_categories": [
+      "Acupuncture",
+      "Manual Therapy",
+      "Massage Therapy",
+      "Pain Treatment",
+      "Physiotherapy",
+      "Sports Rehab",
+      "Wellness / Other"
+    ],
+    "service_presentation": {
+      "has_services_page": true,
+      "services_page_url": "https://motionmatters.ca/treatments",
+      "has_homepage_services": true,
+      "homepage_service_count": 6,
+      "service_count": 7,
+      "services_have_descriptions": true,
+      "services_page_text_length": 2686,
+      "has_dedicated_subpages": true,
+      "subpages_found": [
+        "https://motionmatters.ca/conditions/breast-cancer",
+        "https://motionmatters.ca/conditions/carpal-tunnel-syndrome",
+        "https://motionmatters.ca/conditions/arthritis",
+        "https://motionmatters.ca/conditions/chronic-pain-syndrome",
+        "https://motionmatters.ca/our-treatments/manual-therapy",
+        "https://motionmatters.ca/our-treatments",
+        "https://motionmatters.ca/conditions/frozen-shoulder",
+        "https://motionmatters.ca/conditions",
+        "https://motionmatters.ca/treatments"
+      ],
+      "details": [
+        "Services page found (https://motionmatters.ca/treatments) — appears to have descriptions (visible text: 2686 chars).",
+        "6 service category(ies) visible on homepage.",
+        "9 dedicated service sub-page(s) found: https://motionmatters.ca/conditions/breast-cancer, https://motionmatters.ca/conditions/carpal-tunnel-syndrome, https://motionmatters.ca/conditions/arthritis....",
+        "Total service categories (homepage + services page): 7."
+      ]
+    },
+    "contact": {
+      "phone": true,
+      "email": true,
+      "address": true,
+      "phone_sample": "(613) 237-4343",
+      "email_sample": "info@motionmatters.ca"
+    },
+    "has_clickable_phone": true,
+    "has_hours": true,
+    "contact_in_header_footer": true,
+    "insurance_any": true,
+    "insurance_on_key_page": true,
+    "insurance_specificity": "vague",
+    "insurance_providers_found": [],
+    "direct_billing_mentioned": false,
+    "insurance_on_homepage": false,
+    "has_review_widget": false,
+    "has_testimonial_content": true,
+    "max_testimonial_count": 1,
+    "has_star_rating": true,
+    "review_platforms_linked": [
+      "Facebook",
+      "Instagram"
+    ],
+    "review_platform_count": 2,
+    "has_gbp_link": false,
+    "best_rating_value": 4.8,
+    "best_review_count": 57,
+    "most_recent_review_date": null,
+    "has_misleading_review_claim": false,
+    "best_team_member_count": 17,
+    "best_credentialed_count": 1,
+    "has_detailed_team_bios": false,
+    "has_credentials": true,
+    "has_professional_assoc": false,
+    "has_years_in_practice": false,
+    "all_locations": [
+      "Nepean",
+      "Ottawa"
+    ],
+    "homepage_locations": [
+      "Ottawa"
+    ],
+    "homepage_title": "Ottawa Physiotherapy - Physio Ottawa - Sports Injury Physiotherapists",
+    "city_in_title": true,
+    "neighbourhood_mentioned": true,
+    "google_map_on_contact": false,
+    "has_local_schema": true,
+    "pages_with_meta_desc": 4,
+    "pages_with_proper_meta_desc": 2,
+    "homepage_has_meta_desc": true,
+    "total_images": 121,
+    "total_images_missing_alt": 14,
+    "alt_coverage_pct": 88.4,
+    "best_pagespeed_score": null,
+    "homepage_pagespeed": null,
+    "mobile_readiness": {
+      "homepage_has_viewport": true,
+      "any_page_has_viewport": true,
+      "has_media_queries": true,
+      "has_mobile_nav": true,
+      "booking_mobile_accessible": true,
+      "booking_mobile_detail": "Contact form detected — accessible on mobile but high friction.",
+      "total_imgs": 121,
+      "total_imgs_missing_dims": 0,
+      "max_render_blocking_scripts": 0,
+      "max_html_size_bytes": 128393,
+      "heavy_pages": [],
+      "small_font_found": true,
+      "small_tap_found": false,
+      "fixed_wide_pages": [],
+      "findings": [
+        "Viewport meta tag present on homepage — site is configured for mobile.",
+        "Responsive CSS detected (media queries present) — layout likely adapts to mobile screen sizes.",
+        "Mobile navigation pattern detected (hamburger/toggle menu) — mobile navigation is present.",
+        "Contact form detected — accessible on mobile but high friction.",
+        "121 images found across all pages — high image count may slow mobile load times.",
+        "Font sizes below 14px detected in inline styles — may be difficult to read on small screens."
+      ]
+    }
+  },
+  "scores": {
+    "categories": {
+      "Local Relevance": 9,
+      "Services Visibility": 9,
+      "Booking Conversion": 3,
+      "Trust / Reviews": 9,
+      "Contact Completeness": 9,
+      "Insurance / Accessibility": 3,
+      "Mobile Readiness": 8
+    },
+    "findings": {
+      "Local Relevance": [
+        "City 'Ottawa' in title and homepage. Address present: True.",
+        "LocalBusiness schema markup detected — strong local SEO signal.",
+        "Meta descriptions: 2/4 pages have proper descriptions. Missing descriptions mean Google pulls random text for search snippets — bad for CTR."
+      ],
+      "Services Visibility": [
+        "Comprehensive service presentation: descriptions, dedicated sub-pages, and homepage coverage.",
+        "Services page found (https://motionmatters.ca/treatments) — appears to have descriptions (visible text: 2686 chars).",
+        "6 service category(ies) visible on homepage.",
+        "9 dedicated service sub-page(s) found: https://motionmatters.ca/conditions/breast-cancer, https://motionmatters.ca/conditions/carpal-tunnel-syndrome, https://motionmatters.ca/conditions/arthritis....",
+        "Total service categories (homepage + services page): 7."
+      ],
+      "Booking Conversion": [
+        "Contact form detected — patients must submit a form and wait for a callback to schedule.",
+        "No booking CTA found on homepage. No real-time booking system detected."
+      ],
+      "Trust / Reviews": [
+        "Strong Google review presence: 57 reviews at 4.8★ across 2 platforms.",
+        "NOTE: Review count and rating from website schema markup. Actual Google Business Profile may show higher numbers if schema hasn't been updated recently. Verify on Google Maps for most current data."
+      ],
+      "Contact Completeness": [
+        "Phone, email, and address all present.",
+        "Hours of operation displayed.",
+        "Contact info accessible in site header or footer.",
+        "Phone number is clickable (tel: link) — mobile-friendly."
+      ],
+      "Insurance / Accessibility": [
+        "Insurance mentioned on a key page but vague — no providers named, no process explained.",
+        "Patients cannot determine from this site whether their plan is accepted."
+      ],
+      "Mobile Readiness": [
+        "Viewport meta tag present on homepage — site is configured for mobile.",
+        "Responsive CSS detected (media queries present) — layout likely adapts to mobile screen sizes.",
+        "Mobile navigation pattern detected (hamburger/toggle menu) — mobile navigation is present.",
+        "Contact form detected — accessible on mobile but high friction.",
+        "121 images found across all pages — high image count may slow mobile load times.",
+        "Font sizes below 14px detected in inline styles — may be difficult to read on small screens."
+      ]
+    },
+    "total": 50,
+    "max": 70
+  },
+  "priority_issues": [
+    {
+      "category": "Booking Conversion",
+      "score": 3,
+      "max": 10,
+      "findings": [
+        "Contact form detected — patients must submit a form and wait for a callback to schedule.",
+        "No booking CTA found on homepage. No real-time booking system detected."
+      ]
+    },
+    {
+      "category": "Insurance / Accessibility",
+      "score": 3,
+      "max": 10,
+      "findings": [
+        "Insurance mentioned on a key page but vague — no providers named, no process explained.",
+        "Patients cannot determine from this site whether their plan is accepted."
+      ]
+    }
+  ],
+  "design_and_accessibility": {
+    "design_flags": [
+      "⚠️  Visual clutter: 121 images across all pages — consider optimization to reduce load time.",
+      "✓ Mobile responsive: Viewport meta tag and responsive CSS detected.",
+      "⚠️  Sparse navigation: Very few internal links — patients may not find important pages.",
+      "⚠️  Accessibility: No H1 headings detected — poor document structure for screen readers.",
+      "✓ Credibility: Professional credentials displayed — builds trust."
+    ]
+  },
+  "page_signals": [
+    {
+      "url": "https://motionmatters.ca/",
+      "title": "Ottawa Physiotherapy - Physio Ottawa - Sports Injury Physiotherapists",
+      "visible_text_length": 3536,
+      "booking_keyword_count": 0,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": true,
+        "testimonial_count": 1,
+        "has_star_rating": true,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": 4.8,
+        "review_count": 57,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Testimonial/review content detected (1 item(s)).",
+          "Star rating displayed.",
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Google review schema found: 4.8★ (57 reviews)."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": true,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 12,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 4,
+        "alt_coverage_pct": 66.7,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 128393
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 151,
+        "status": "ok",
+        "content_preview": "Complete Ottawa physiotherapy clinic. High-quality Ottawa physiotherapist service. Full-service phys…",
+        "details": [
+          "Meta description present and properly sized."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/conditions/breast-cancer",
+      "title": "Breast Cancer - Ottawa Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 2378,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 3,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/conditions/breast-cancer",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 4,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 110489
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/conditions/carpal-tunnel-syndrome",
+      "title": "Carpal Tunnel Syndrome - Ottawa Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 2924,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 1,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/conditions/carpal-tunnel-syndrome",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 4,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 111642
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/conditions/arthritis",
+      "title": "Arthritis - Ottawa Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 2864,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/conditions/arthritis",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 4,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 112738
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/about-us/our-team",
+      "title": "Ottawa Physiotherapists Team - Motion Matters Physiotherapy",
+      "visible_text_length": 3300,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": true,
+        "team_member_count": 17,
+        "credentialed_members": 1,
+        "has_detailed_bios": false,
+        "details": [
+          "1/17 team members have recognizable credentials."
+        ]
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/about-us/our-team",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 21,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 126615
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 141,
+        "status": "ok",
+        "content_preview": "Motion Matters is a unique physiotherapy and sports injury clinic located in downtown Ottawa. Contac…",
+        "details": [
+          "Meta description present and properly sized."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/clinic",
+      "title": "Physiotherapy and Sports Injury Clinic Ottawa - Motion Matters",
+      "visible_text_length": 4086,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/clinic",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 114414
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/about",
+      "title": "Motion Matters Physiotherapy and Sports Injury Clinic - About us",
+      "visible_text_length": 2431,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": true,
+        "team_member_count": 1,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": [
+          "Team page shows 1 members but credentials not clearly listed."
+        ]
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/about",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 109823
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 93,
+        "status": "too_short",
+        "content_preview": "Motion Matters is a unique physiotherapy and sports injury clinic located in downtown Ottawa.",
+        "details": [
+          "Meta description too short (93 chars). Recommended: 150-160 characters.",
+          "Preview: 'Motion Matters is a unique physiotherapy and sports injury clinic located in downtown Ottawa.'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/conditions/chronic-pain-syndrome",
+      "title": "Chronic Pain Syndrome - Ottawa Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 2535,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/conditions/chronic-pain-syndrome",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 4,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 110326
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/contact-us",
+      "title": "Motion Matters Physiotherapy and Sports Injury Clinic - Contact us",
+      "visible_text_length": 2336,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "form",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": true,
+        "call_to_book_language": true,
+        "details": [
+          "Contact form detected — patients submit a form and wait for callback. No real-time online booking system found."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": true,
+        "testimonial_count": 1,
+        "has_star_rating": true,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": 4.8,
+        "review_count": 57,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Testimonial/review content detected (1 item(s)).",
+          "Star rating displayed.",
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Google review schema found: 4.8★ (57 reviews)."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": true,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/contact-us",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 125301
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/about-us/our-story",
+      "title": "Our story - Ottawa Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 3039,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/about-us/our-story",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 108921
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/faqs",
+      "title": "Motion Matters Physiotherapy and Sports Injury Clinic - FAQs",
+      "visible_text_length": 5540,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 6,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/faqs",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 4,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 111102
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/our-treatments/manual-therapy",
+      "title": "Manual Therapy Ottawa - Motion Matters Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 3540,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/our-treatments/manual-therapy",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 112476
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/faq",
+      "title": "Motion Matters Physiotherapy and Sports Injury Clinic - FAQs",
+      "visible_text_length": 5540,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 6,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/faq",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 4,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 111102
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/our-treatments",
+      "title": "Ottawa Physiotherapy Treatments - Motion Matters Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 3484,
+      "booking_keyword_count": 0,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/our-treatments",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 15,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 93.3,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 119871
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/conditions/frozen-shoulder",
+      "title": "Frozen Shoulder - Ottawa Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 2926,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/conditions/frozen-shoulder",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 4,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 110796
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/contact",
+      "title": "Motion Matters Physiotherapy and Sports Injury Clinic - Contact us",
+      "visible_text_length": 2336,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "form",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": true,
+        "call_to_book_language": true,
+        "details": [
+          "Contact form detected — patients submit a form and wait for callback. No real-time online booking system found."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": true,
+        "testimonial_count": 1,
+        "has_star_rating": true,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": 4.8,
+        "review_count": 57,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Testimonial/review content detected (1 item(s)).",
+          "Star rating displayed.",
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Google review schema found: 4.8★ (57 reviews)."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": true,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/contact",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 125301
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/about-us",
+      "title": "Motion Matters Physiotherapy and Sports Injury Clinic - About us",
+      "visible_text_length": 2431,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": true,
+        "team_member_count": 1,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": [
+          "Team page shows 1 members but credentials not clearly listed."
+        ]
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/about-us",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 109823
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 93,
+        "status": "too_short",
+        "content_preview": "Motion Matters is a unique physiotherapy and sports injury clinic located in downtown Ottawa.",
+        "details": [
+          "Meta description too short (93 chars). Recommended: 150-160 characters.",
+          "Preview: 'Motion Matters is a unique physiotherapy and sports injury clinic located in downtown Ottawa.'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/conditions",
+      "title": "Conditions - Ottawa Physiotherapy and Sports Injury Clinic",
+      "visible_text_length": 2923,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 1,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/conditions",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 116105
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://motionmatters.ca/treatments",
+      "title": "Nepean Physiotherapy - Motion Matters Physiotherapy",
+      "visible_text_length": 2686,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "(613) 237-4343",
+        "email_sample": "info@motionmatters.ca"
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Nepean",
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://motionmatters.ca/treatments",
+        "has_viewport_tag": true,
+        "has_media_queries": true,
+        "has_mobile_nav": true,
+        "small_font_detected": true,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 5,
+        "imgs_missing_dims": 0,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 80.0,
+        "render_blocking_scripts": 0,
+        "html_size_bytes": 114624
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    }
+  ],
+  "pages_analyzed": [
+    "https://motionmatters.ca/",
+    "https://motionmatters.ca/conditions/breast-cancer",
+    "https://motionmatters.ca/conditions/carpal-tunnel-syndrome",
+    "https://motionmatters.ca/conditions/arthritis",
+    "https://motionmatters.ca/about-us/our-team",
+    "https://motionmatters.ca/clinic",
+    "https://motionmatters.ca/about",
+    "https://motionmatters.ca/conditions/chronic-pain-syndrome",
+    "https://motionmatters.ca/contact-us",
+    "https://motionmatters.ca/about-us/our-story",
+    "https://motionmatters.ca/faqs",
+    "https://motionmatters.ca/our-treatments/manual-therapy",
+    "https://motionmatters.ca/faq",
+    "https://motionmatters.ca/our-treatments",
+    "https://motionmatters.ca/conditions/frozen-shoulder",
+    "https://motionmatters.ca/contact",
+    "https://motionmatters.ca/about-us",
+    "https://motionmatters.ca/conditions",
+    "https://motionmatters.ca/treatments"
+  ]
+}

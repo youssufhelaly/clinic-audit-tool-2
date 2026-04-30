@@ -1,0 +1,2021 @@
+{
+  "url": "https://prophysiotherapy.com/",
+  "business_name": "Pro Physio & Sport Medicine Centres",
+  "audit_date": "2026-04-30",
+  "aggregated_signals": {
+    "total_booking_count": 15,
+    "booking_on_homepage": 2,
+    "booking_system_type": "form",
+    "booking_platform_name": null,
+    "booking_platform_on_homepage": false,
+    "has_dedicated_booking_page": false,
+    "booking_cta_on_homepage": true,
+    "total_review_count": 37,
+    "all_service_categories": [
+      "Acupuncture",
+      "Chiropractic",
+      "Manual Therapy",
+      "Massage Therapy",
+      "Orthotics & Support",
+      "Pain Treatment",
+      "Pelvic Health",
+      "Physiotherapy",
+      "Sports Rehab",
+      "Wellness / Other"
+    ],
+    "scoring_service_categories": [
+      "Acupuncture",
+      "Chiropractic",
+      "Manual Therapy",
+      "Massage Therapy",
+      "Orthotics & Support",
+      "Pain Treatment",
+      "Pelvic Health",
+      "Physiotherapy",
+      "Sports Rehab",
+      "Wellness / Other"
+    ],
+    "service_presentation": {
+      "has_services_page": true,
+      "services_page_url": "https://prophysiotherapy.com/services",
+      "has_homepage_services": true,
+      "homepage_service_count": 3,
+      "service_count": 10,
+      "services_have_descriptions": true,
+      "services_page_text_length": 2303,
+      "has_dedicated_subpages": true,
+      "subpages_found": [
+        "https://prophysiotherapy.com/prophysio_academy/index.html",
+        "https://prophysiotherapy.com/services_rehab-kinesiology.html",
+        "https://prophysiotherapy.com/services_physiotherapy.html"
+      ],
+      "details": [
+        "Services page found (https://prophysiotherapy.com/services) — appears to have descriptions (visible text: 2303 chars).",
+        "3 service category(ies) visible on homepage.",
+        "3 dedicated service sub-page(s) found: https://prophysiotherapy.com/prophysio_academy/index.html, https://prophysiotherapy.com/services_rehab-kinesiology.html, https://prophysiotherapy.com/services_physiotherapy.html.",
+        "Total service categories (homepage + services page): 10."
+      ]
+    },
+    "contact": {
+      "phone": true,
+      "email": true,
+      "address": true,
+      "phone_sample": "613-747-8787",
+      "email_sample": "info@prophysiotherapy.com"
+    },
+    "has_clickable_phone": true,
+    "has_hours": true,
+    "contact_in_header_footer": true,
+    "insurance_any": true,
+    "insurance_on_key_page": true,
+    "insurance_specificity": "moderate",
+    "insurance_providers_found": [
+      "WSIB"
+    ],
+    "direct_billing_mentioned": false,
+    "insurance_on_homepage": false,
+    "has_review_widget": false,
+    "has_testimonial_content": true,
+    "max_testimonial_count": 5,
+    "has_star_rating": false,
+    "review_platforms_linked": [
+      "Facebook",
+      "Instagram"
+    ],
+    "review_platform_count": 2,
+    "has_gbp_link": false,
+    "best_rating_value": null,
+    "best_review_count": null,
+    "most_recent_review_date": null,
+    "has_misleading_review_claim": true,
+    "best_team_member_count": 0,
+    "best_credentialed_count": 0,
+    "has_detailed_team_bios": false,
+    "has_credentials": true,
+    "has_professional_assoc": true,
+    "has_years_in_practice": true,
+    "all_locations": [
+      "Nepean",
+      "Orleans",
+      "Ottawa"
+    ],
+    "homepage_locations": [
+      "Ottawa"
+    ],
+    "homepage_title": "Pro Physio & Sport Medicine Centres | Welcome",
+    "city_in_title": false,
+    "neighbourhood_mentioned": false,
+    "google_map_on_contact": true,
+    "has_local_schema": false,
+    "pages_with_meta_desc": 15,
+    "pages_with_proper_meta_desc": 0,
+    "homepage_has_meta_desc": true,
+    "total_images": 393,
+    "total_images_missing_alt": 177,
+    "alt_coverage_pct": 55.0,
+    "best_pagespeed_score": null,
+    "homepage_pagespeed": null,
+    "mobile_readiness": {
+      "homepage_has_viewport": false,
+      "any_page_has_viewport": false,
+      "has_media_queries": false,
+      "has_mobile_nav": false,
+      "booking_mobile_accessible": true,
+      "booking_mobile_detail": "Contact form detected — accessible on mobile but high friction.",
+      "total_imgs": 393,
+      "total_imgs_missing_dims": 261,
+      "max_render_blocking_scripts": 15,
+      "max_html_size_bytes": 97557,
+      "heavy_pages": [],
+      "small_font_found": false,
+      "small_tap_found": false,
+      "fixed_wide_pages": [],
+      "findings": [
+        "No viewport meta tag found on any page — site is not configured for mobile devices.",
+        "No CSS media queries detected — layout may not adapt to mobile screens. Site may appear as a scaled-down desktop version on phones.",
+        "No mobile navigation pattern detected — patients on mobile may struggle to navigate the site.",
+        "Contact form detected — accessible on mobile but high friction.",
+        "393 images found across all pages — high image count may slow mobile load times.",
+        "261 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
+        "Up to 15 render-blocking scripts detected (missing async/defer) — may delay initial page render on mobile."
+      ]
+    }
+  },
+  "scores": {
+    "categories": {
+      "Local Relevance": 4,
+      "Services Visibility": 9,
+      "Booking Conversion": 4,
+      "Trust / Reviews": 2,
+      "Contact Completeness": 10,
+      "Insurance / Accessibility": 5,
+      "Mobile Readiness": 1
+    },
+    "findings": {
+      "Local Relevance": [
+        "City on homepage and address present, but city not found in title tag (title: \"Pro Physio & Sport Medicine Centres | Welcome\").",
+        "Meta descriptions: 0/15 pages have proper descriptions. Missing descriptions mean Google pulls random text for search snippets — bad for CTR."
+      ],
+      "Services Visibility": [
+        "Comprehensive service presentation: descriptions, dedicated sub-pages, and homepage coverage.",
+        "Services page found (https://prophysiotherapy.com/services) — appears to have descriptions (visible text: 2303 chars).",
+        "3 service category(ies) visible on homepage.",
+        "3 dedicated service sub-page(s) found: https://prophysiotherapy.com/prophysio_academy/index.html, https://prophysiotherapy.com/services_rehab-kinesiology.html, https://prophysiotherapy.com/services_physiotherapy.html.",
+        "Total service categories (homepage + services page): 10."
+      ],
+      "Booking Conversion": [
+        "Booking CTA present on homepage, but it leads to a contact form — patients submit and wait for a callback.",
+        "No real-time online booking system found."
+      ],
+      "Trust / Reviews": [
+        "⚠️ CRITICAL: Site displays inaccurate review ratings (claimed vs. actual mismatch). This damages credibility.",
+        "Multi-platform presence (Facebook, Instagram) with testimonial content — solid trust foundation.",
+        "Professional credentials detected — reinforces trust.",
+        "Years in practice mentioned — shows stability.",
+        "Missing Google Business Profile link — recommend adding for discoverability and reviews."
+      ],
+      "Contact Completeness": [
+        "Phone, email, and address all present.",
+        "Hours of operation displayed.",
+        "Contact info accessible in site header or footer.",
+        "Phone number is clickable (tel: link) — mobile-friendly.",
+        "Google Map embedded or linked on contact page."
+      ],
+      "Insurance / Accessibility": [
+        "Providers named (WSIB) but direct billing not explicitly mentioned.",
+        "Patients may still need to call to confirm if the clinic will bill directly.",
+        "Accessibility: 177/393 images missing alt text (45% gap). Adding alt descriptions would improve search visibility and accessibility."
+      ],
+      "Mobile Readiness": [
+        "No viewport meta tag found on any page — site is not configured for mobile devices.",
+        "No CSS media queries detected — layout may not adapt to mobile screens. Site may appear as a scaled-down desktop version on phones.",
+        "No mobile navigation pattern detected — patients on mobile may struggle to navigate the site.",
+        "Contact form detected — accessible on mobile but high friction.",
+        "393 images found across all pages — high image count may slow mobile load times.",
+        "261 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
+        "Up to 15 render-blocking scripts detected (missing async/defer) — may delay initial page render on mobile."
+      ]
+    },
+    "total": 35,
+    "max": 70
+  },
+  "priority_issues": [
+    {
+      "category": "Mobile Readiness",
+      "score": 1,
+      "max": 10,
+      "findings": [
+        "No viewport meta tag found on any page — site is not configured for mobile devices.",
+        "No CSS media queries detected — layout may not adapt to mobile screens. Site may appear as a scaled-down desktop version on phones.",
+        "No mobile navigation pattern detected — patients on mobile may struggle to navigate the site.",
+        "Contact form detected — accessible on mobile but high friction.",
+        "393 images found across all pages — high image count may slow mobile load times.",
+        "261 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
+        "Up to 15 render-blocking scripts detected (missing async/defer) — may delay initial page render on mobile."
+      ]
+    },
+    {
+      "category": "Trust / Reviews",
+      "score": 2,
+      "max": 10,
+      "findings": [
+        "⚠️ CRITICAL: Site displays inaccurate review ratings (claimed vs. actual mismatch). This damages credibility.",
+        "Multi-platform presence (Facebook, Instagram) with testimonial content — solid trust foundation.",
+        "Professional credentials detected — reinforces trust.",
+        "Years in practice mentioned — shows stability.",
+        "Missing Google Business Profile link — recommend adding for discoverability and reviews."
+      ]
+    },
+    {
+      "category": "Local Relevance",
+      "score": 4,
+      "max": 10,
+      "findings": [
+        "City on homepage and address present, but city not found in title tag (title: \"Pro Physio & Sport Medicine Centres | Welcome\").",
+        "Meta descriptions: 0/15 pages have proper descriptions. Missing descriptions mean Google pulls random text for search snippets — bad for CTR."
+      ]
+    }
+  ],
+  "design_and_accessibility": {
+    "design_flags": [
+      "⚠️  Visual clutter: 393 images across all pages — consider optimization to reduce load time.",
+      "⚠️  Not mobile-responsive: Missing viewport meta tag — site may not adapt to mobile screen sizes.",
+      "⚠️  Sparse navigation: Very few internal links — patients may not find important pages.",
+      "⚠️  SEO/UX: Only 0/15 pages have proper meta descriptions — limits Google snippet quality.",
+      "⚠️  Accessibility: No H1 headings detected — poor document structure for screen readers.",
+      "✓ Credibility: Professional credentials displayed — builds trust."
+    ]
+  },
+  "page_signals": [
+    {
+      "url": "https://prophysiotherapy.com/",
+      "title": "Pro Physio & Sport Medicine Centres | Welcome",
+      "visible_text_length": 5311,
+      "booking_keyword_count": 2,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 3,
+      "service_categories": [
+        "Physiotherapy",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": true,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": "info@prophysiotherapy.com"
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 2,
+      "insurance_depth": {
+        "specificity": "moderate",
+        "providers_found": [
+          "WSIB"
+        ],
+        "direct_billing": false,
+        "details": [
+          "Providers named (WSIB) but direct billing not explicitly stated."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": true,
+        "testimonial_count": 3,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Testimonial/review content detected (3 item(s)).",
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": true,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 28,
+        "imgs_missing_dims": 13,
+        "imgs_missing_alt": 11,
+        "alt_coverage_pct": 60.7,
+        "render_blocking_scripts": 15,
+        "html_size_bytes": 35846
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/testimonials.html",
+      "title": "Pro Physio & Sport Medicine Centres | Virtual care",
+      "visible_text_length": 4392,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 5,
+      "service_categories": [
+        "Physiotherapy",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": true,
+        "testimonial_count": 5,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Testimonial/review content detected (5 item(s)).",
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/testimonials.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 13,
+        "imgs_missing_dims": 11,
+        "imgs_missing_alt": 11,
+        "alt_coverage_pct": 15.4,
+        "render_blocking_scripts": 7,
+        "html_size_bytes": 22845
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 207,
+        "status": "too_long",
+        "content_preview": "Pro Physio & Sport Medicine Centres is the largest provider of physiotherapy and rehabilitation serv…",
+        "details": [
+          "Meta description too long (207 chars). Google will truncate in search results.",
+          "Target: 150-160 characters."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/preferred_provider.html",
+      "title": "Pro Physio & Sport Medicine Centres | Preferred Provider",
+      "visible_text_length": 2550,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 2,
+      "insurance_depth": {
+        "specificity": "moderate",
+        "providers_found": [
+          "WSIB"
+        ],
+        "direct_billing": false,
+        "details": [
+          "Providers named (WSIB) but direct billing not explicitly stated."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/preferred_provider.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 16,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 10,
+        "alt_coverage_pct": 37.5,
+        "render_blocking_scripts": 6,
+        "html_size_bytes": 20356
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/about_team.html",
+      "title": "Pro Physio & Sport Medicine Centres | Our Team",
+      "visible_text_length": 1854,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/about_team.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 14,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 11,
+        "alt_coverage_pct": 21.4,
+        "render_blocking_scripts": 6,
+        "html_size_bytes": 20186
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/about",
+      "title": "Pro Physio & Sport Medicine Centres | About",
+      "visible_text_length": 3883,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Sports Rehab",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 1,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/about",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 14,
+        "imgs_missing_dims": 11,
+        "imgs_missing_alt": 12,
+        "alt_coverage_pct": 14.3,
+        "render_blocking_scripts": 6,
+        "html_size_bytes": 22620
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 207,
+        "status": "too_long",
+        "content_preview": "Pro Physio & Sport Medicine Centres is the largest provider of physiotherapy and rehabilitation serv…",
+        "details": [
+          "Meta description too long (207 chars). Google will truncate in search results.",
+          "Target: 150-160 characters."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/services.html",
+      "title": "Pro Physio & Sport Medicine Centres | Services",
+      "visible_text_length": 2303,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Chiropractic",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Orthotics & Support",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/services.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 49,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 10,
+        "alt_coverage_pct": 79.6,
+        "render_blocking_scripts": 8,
+        "html_size_bytes": 41321
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/about.html",
+      "title": "Pro Physio & Sport Medicine Centres | About",
+      "visible_text_length": 3883,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Acupuncture",
+        "Sports Rehab",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": true,
+      "insurance_count": 1,
+      "insurance_depth": {
+        "specificity": "vague",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "Insurance mentioned but vague — no providers named, no direct billing explained. Patients cannot determine if their plan is accepted."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/about.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 14,
+        "imgs_missing_dims": 11,
+        "imgs_missing_alt": 12,
+        "alt_coverage_pct": 14.3,
+        "render_blocking_scripts": 6,
+        "html_size_bytes": 22620
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 207,
+        "status": "too_long",
+        "content_preview": "Pro Physio & Sport Medicine Centres is the largest provider of physiotherapy and rehabilitation serv…",
+        "details": [
+          "Meta description too long (207 chars). Google will truncate in search results.",
+          "Target: 150-160 characters."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/prophysio_academy/index.html",
+      "title": "Pro Physio Academy",
+      "visible_text_length": 1705,
+      "booking_keyword_count": 0,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 0,
+      "service_categories": [
+        "Physiotherapy",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "(613) 747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": false,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/prophysio_academy/index.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 21,
+        "imgs_missing_dims": 15,
+        "imgs_missing_alt": 7,
+        "alt_coverage_pct": 66.7,
+        "render_blocking_scripts": 10,
+        "html_size_bytes": 18132
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/contact",
+      "title": "Pro Physio & Sport Medicine Centres | Contact",
+      "visible_text_length": 1680,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "form",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": true,
+        "call_to_book_language": false,
+        "details": [
+          "Contact form detected — patients submit a form and wait for callback. No real-time online booking system found."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": true,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/contact",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 12,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 10,
+        "alt_coverage_pct": 16.7,
+        "render_blocking_scripts": 10,
+        "html_size_bytes": 22564
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/about_involvement.html",
+      "title": "Pro Physio & Sport Medicine Centres | Sport & Community Involvement",
+      "visible_text_length": 28428,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 4,
+      "service_categories": [
+        "Physiotherapy",
+        "Manual Therapy",
+        "Pain Treatment",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Nepean",
+        "Orleans",
+        "Ottawa"
+      ],
+      "neighbourhood_detected": true,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": true,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": true,
+        "has_years_in_practice": true,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": true,
+        "claimed_rating": 5.0,
+        "details": [
+          "⚠️ UNVERIFIED: Site claims 5.0★ rating but no Google schema data found — claim may be outdated or unverified.",
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist').",
+          "Professional association mentioned.",
+          "Establishment date or years-in-practice language detected."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/about_involvement.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 114,
+        "imgs_missing_dims": 109,
+        "imgs_missing_alt": 32,
+        "alt_coverage_pct": 71.9,
+        "render_blocking_scripts": 11,
+        "html_size_bytes": 97557
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/services",
+      "title": "Pro Physio & Sport Medicine Centres | Services",
+      "visible_text_length": 2303,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Chiropractic",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Orthotics & Support",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/services",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 49,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 10,
+        "alt_coverage_pct": 79.6,
+        "render_blocking_scripts": 8,
+        "html_size_bytes": 41321
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/services_rehab-kinesiology.html",
+      "title": "Pro Physio & Sport Medicine Centres | Services: Rehab/Kinesiology",
+      "visible_text_length": 3108,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Chiropractic",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Orthotics & Support",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/services_rehab-kinesiology.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 12,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 10,
+        "alt_coverage_pct": 16.7,
+        "render_blocking_scripts": 6,
+        "html_size_bytes": 23075
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/services_physiotherapy.html",
+      "title": "Pro Physio & Sport Medicine Centres | Services: Physiotherapy",
+      "visible_text_length": 2652,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy",
+        "Massage Therapy",
+        "Chiropractic",
+        "Acupuncture",
+        "Manual Therapy",
+        "Sports Rehab",
+        "Pelvic Health",
+        "Pain Treatment",
+        "Orthotics & Support",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": true,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram.",
+          "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/services_physiotherapy.html",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 12,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 10,
+        "alt_coverage_pct": 16.7,
+        "render_blocking_scripts": 6,
+        "html_size_bytes": 22071
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 95,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in Physiotherapy in the Greater Ottawa Region",
+        "details": [
+          "Meta description too short (95 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in Physiotherapy in the Greater Ottawa Region'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/contact.php",
+      "title": "Pro Physio & Sport Medicine Centres | Contact",
+      "visible_text_length": 1680,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "form",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": true,
+        "call_to_book_language": false,
+        "details": [
+          "Contact form detected — patients submit a form and wait for callback. No real-time online booking system found."
+        ]
+      },
+      "review_keyword_count": 2,
+      "service_categories": [
+        "Physiotherapy"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": false,
+        "testimonial_count": 0,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": true,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/contact.php",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 12,
+        "imgs_missing_dims": 10,
+        "imgs_missing_alt": 10,
+        "alt_coverage_pct": 16.7,
+        "render_blocking_scripts": 10,
+        "html_size_bytes": 22564
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 114,
+        "status": "too_short",
+        "content_preview": "Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…",
+        "details": [
+          "Meta description too short (114 chars). Recommended: 150-160 characters.",
+          "Preview: 'Pro Physio and Sport Medicine Centres is a leader in physiotherapy and rehabilitation in the Greater…'"
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    },
+    {
+      "url": "https://prophysiotherapy.com/testimonials",
+      "title": "Pro Physio & Sport Medicine Centres | Virtual care",
+      "visible_text_length": 4392,
+      "booking_keyword_count": 1,
+      "booking_system": {
+        "type": "none",
+        "platform_name": null,
+        "platform_links": [],
+        "has_contact_form": false,
+        "call_to_book_language": false,
+        "details": [
+          "No booking system detected on this page."
+        ]
+      },
+      "review_keyword_count": 5,
+      "service_categories": [
+        "Physiotherapy",
+        "Wellness / Other"
+      ],
+      "contact": {
+        "phone": true,
+        "email": false,
+        "address": true,
+        "phone_sample": "613-747-8787",
+        "email_sample": null
+      },
+      "insurance_mentioned": false,
+      "insurance_count": 0,
+      "insurance_depth": {
+        "specificity": "none",
+        "providers_found": [],
+        "direct_billing": false,
+        "details": [
+          "No insurance or billing information found on this page."
+        ]
+      },
+      "locations": [
+        "Ottawa"
+      ],
+      "neighbourhood_detected": false,
+      "contact_quality": {
+        "clickable_phone": true,
+        "has_hours": false,
+        "contact_in_header_footer": true
+      },
+      "trust_signals": {
+        "has_review_widget": false,
+        "has_testimonial_content": true,
+        "testimonial_count": 5,
+        "has_star_rating": false,
+        "review_platforms_linked": [
+          "Facebook",
+          "Instagram"
+        ],
+        "has_credentials": false,
+        "has_professional_assoc": false,
+        "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
+        "has_misleading_claim": false,
+        "claimed_rating": null,
+        "details": [
+          "Testimonial/review content detected (5 item(s)).",
+          "Review platform link(s) found: Facebook, Instagram."
+        ]
+      },
+      "team_credibility": {
+        "has_team_page": false,
+        "team_member_count": 0,
+        "credentialed_members": 0,
+        "has_detailed_bios": false,
+        "details": []
+      },
+      "map_embed": false,
+      "local_schema": false,
+      "mobile_signals": {
+        "url": "https://prophysiotherapy.com/testimonials",
+        "has_viewport_tag": false,
+        "has_media_queries": false,
+        "has_mobile_nav": false,
+        "small_font_detected": false,
+        "small_tap_target": false,
+        "fixed_wide_count": 0,
+        "img_count": 13,
+        "imgs_missing_dims": 11,
+        "imgs_missing_alt": 11,
+        "alt_coverage_pct": 15.4,
+        "render_blocking_scripts": 7,
+        "html_size_bytes": 22845
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 207,
+        "status": "too_long",
+        "content_preview": "Pro Physio & Sport Medicine Centres is the largest provider of physiotherapy and rehabilitation serv…",
+        "details": [
+          "Meta description too long (207 chars). Google will truncate in search results.",
+          "Target: 150-160 characters."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
+      }
+    }
+  ],
+  "pages_analyzed": [
+    "https://prophysiotherapy.com/",
+    "https://prophysiotherapy.com/testimonials.html",
+    "https://prophysiotherapy.com/preferred_provider.html",
+    "https://prophysiotherapy.com/about_team.html",
+    "https://prophysiotherapy.com/about",
+    "https://prophysiotherapy.com/services.html",
+    "https://prophysiotherapy.com/about.html",
+    "https://prophysiotherapy.com/prophysio_academy/index.html",
+    "https://prophysiotherapy.com/contact",
+    "https://prophysiotherapy.com/about_involvement.html",
+    "https://prophysiotherapy.com/services",
+    "https://prophysiotherapy.com/services_rehab-kinesiology.html",
+    "https://prophysiotherapy.com/services_physiotherapy.html",
+    "https://prophysiotherapy.com/contact.php",
+    "https://prophysiotherapy.com/testimonials"
+  ]
+}

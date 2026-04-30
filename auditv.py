@@ -2664,7 +2664,7 @@ def score_site(agg: dict) -> dict:
     recent_reviews = is_recent_review(most_recent_date)
 
     # --- Scoring Logic ---
-    if not has_testim and not has_widget and not has_stars and not platforms and review_count is None and rev_keywords == 0:
+    if not has_testim and not has_widget and not has_stars and not platforms and review_count is None and rev_keywords == 0 and not has_creds and not has_years:
         # TIER 0: No signals at all
         rev_score = 0
         rev_findings.append("No review, testimonial, or trust signals found anywhere on the site.")

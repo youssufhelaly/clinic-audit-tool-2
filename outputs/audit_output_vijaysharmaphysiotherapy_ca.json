@@ -1,11 +1,11 @@
 {
   "url": "https://vijaysharmaphysiotherapy.ca/",
   "business_name": "Downtown Ottawa Physiotherapy",
-  "audit_date": "2026-04-06",
+  "audit_date": "2026-04-17",
   "aggregated_signals": {
     "total_booking_count": 2,
     "booking_on_homepage": 2,
-    "booking_system_type": "form",
+    "booking_system_type": "internal_booking",
     "booking_platform_name": null,
     "booking_platform_on_homepage": false,
     "has_dedicated_booking_page": false,
@@ -62,7 +62,11 @@
     "max_testimonial_count": 0,
     "has_star_rating": false,
     "review_platforms_linked": [],
+    "review_platform_count": 0,
     "has_gbp_link": false,
+    "best_rating_value": null,
+    "best_review_count": null,
+    "most_recent_review_date": null,
     "has_credentials": true,
     "has_professional_assoc": true,
     "has_years_in_practice": true,
@@ -77,13 +81,21 @@
     "neighbourhood_mentioned": true,
     "google_map_on_contact": false,
     "has_local_schema": false,
+    "pages_with_meta_desc": 1,
+    "pages_with_proper_meta_desc": 1,
+    "homepage_has_meta_desc": true,
+    "total_images": 8,
+    "total_images_missing_alt": 1,
+    "alt_coverage_pct": 87.5,
+    "best_pagespeed_score": null,
+    "homepage_pagespeed": null,
     "mobile_readiness": {
       "homepage_has_viewport": true,
       "any_page_has_viewport": true,
       "has_media_queries": true,
       "has_mobile_nav": true,
-      "booking_mobile_accessible": true,
-      "booking_mobile_detail": "Contact form detected — accessible on mobile but high friction.",
+      "booking_mobile_accessible": false,
+      "booking_mobile_detail": "No booking system detected — patients on mobile have no way to book.",
       "total_imgs": 8,
       "total_imgs_missing_dims": 8,
       "max_render_blocking_scripts": 3,
@@ -96,7 +108,7 @@
         "Viewport meta tag present on homepage — site is configured for mobile.",
         "Responsive CSS detected (media queries present) — layout likely adapts to mobile screen sizes.",
         "Mobile navigation pattern detected (hamburger/toggle menu) — mobile navigation is present.",
-        "Contact form detected — accessible on mobile but high friction.",
+        "No booking system detected — patients on mobile have no way to book.",
         "8 total images across all pages — reasonable image count.",
         "8 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
         "Font sizes below 14px detected in inline styles — may be difficult to read on small screens."
@@ -107,11 +119,11 @@
     "categories": {
       "Local Relevance": 6,
       "Services Visibility": 4,
-      "Booking Conversion": 4,
+      "Booking Conversion": 8,
       "Trust / Reviews": 0,
       "Contact Completeness": 8,
       "Insurance / Accessibility": 3,
-      "Mobile Readiness": 8
+      "Mobile Readiness": 6
     },
     "findings": {
       "Local Relevance": [
@@ -126,13 +138,13 @@
         "Total service categories (homepage + services page): 3."
       ],
       "Booking Conversion": [
-        "Booking CTA present on homepage, but it leads to a contact form — patients submit and wait for a callback.",
-        "No real-time online booking system found."
+        "Online booking system available — 'Book Online' button/link prominent on homepage.",
+        "Real-time or request-based scheduling available."
       ],
       "Trust / Reviews": [
         "No review, testimonial, or trust signals found anywhere on the site.",
-        "Professional credentials detected on team/about pages — adds trust.",
-        "Years in practice or establishment date mentioned."
+        "Professional credentials detected — reinforces trust.",
+        "Years in practice mentioned — shows stability."
       ],
       "Contact Completeness": [
         "Phone, email, and address all present.",
@@ -148,13 +160,13 @@
         "Viewport meta tag present on homepage — site is configured for mobile.",
         "Responsive CSS detected (media queries present) — layout likely adapts to mobile screen sizes.",
         "Mobile navigation pattern detected (hamburger/toggle menu) — mobile navigation is present.",
-        "Contact form detected — accessible on mobile but high friction.",
+        "No booking system detected — patients on mobile have no way to book.",
         "8 total images across all pages — reasonable image count.",
         "8 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
         "Font sizes below 14px detected in inline styles — may be difficult to read on small screens."
       ]
     },
-    "total": 33,
+    "total": 35,
     "max": 70
   },
   "priority_issues": [
@@ -164,8 +176,8 @@
       "max": 10,
       "findings": [
         "No review, testimonial, or trust signals found anywhere on the site.",
-        "Professional credentials detected on team/about pages — adds trust.",
-        "Years in practice or establishment date mentioned."
+        "Professional credentials detected — reinforces trust.",
+        "Years in practice mentioned — shows stability."
       ]
     },
     {
@@ -197,13 +209,13 @@
       "visible_text_length": 3352,
       "booking_keyword_count": 2,
       "booking_system": {
-        "type": "form",
+        "type": "internal_booking",
         "platform_name": null,
         "platform_links": [],
-        "has_contact_form": true,
+        "has_contact_form": false,
         "call_to_book_language": false,
         "details": [
-          "Contact form detected — patients submit a form and wait for callback. No real-time online booking system found."
+          "Online booking system detected — 'Book Online' or 'Schedule' button/link found on page."
         ]
       },
       "review_keyword_count": 0,
@@ -247,6 +259,9 @@
         "has_credentials": true,
         "has_professional_assoc": false,
         "has_years_in_practice": true,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
         "details": [
           "Professional credential terms detected (e.g. 'Registered Physiotherapist').",
           "Establishment date or years-in-practice language detected."
@@ -264,8 +279,30 @@
         "fixed_wide_count": 0,
         "img_count": 7,
         "imgs_missing_dims": 7,
+        "imgs_missing_alt": 1,
+        "alt_coverage_pct": 85.7,
         "render_blocking_scripts": 3,
         "html_size_bytes": 129297
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 151,
+        "status": "ok",
+        "content_preview": "Established Downtown Ottawa Physiotherapy Clinic with experienced Ottawa physiotherapists providing …",
+        "details": [
+          "Meta description present and properly sized."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
       }
     },
     {
@@ -325,6 +362,9 @@
         "has_credentials": true,
         "has_professional_assoc": true,
         "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
         "details": [
           "Professional credential terms detected (e.g. 'Registered Physiotherapist').",
           "Professional association mentioned."
@@ -342,8 +382,30 @@
         "fixed_wide_count": 0,
         "img_count": 1,
         "imgs_missing_dims": 1,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
         "render_blocking_scripts": 3,
         "html_size_bytes": 61848
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
       }
     },
     {
@@ -400,6 +462,9 @@
         "has_credentials": false,
         "has_professional_assoc": false,
         "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
         "details": []
       },
       "map_embed": false,
@@ -414,8 +479,30 @@
         "fixed_wide_count": 0,
         "img_count": 0,
         "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100,
         "render_blocking_scripts": 3,
         "html_size_bytes": 70597
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
       }
     },
     {
@@ -477,6 +564,9 @@
         "has_credentials": true,
         "has_professional_assoc": false,
         "has_years_in_practice": false,
+        "rating_value": null,
+        "review_count": null,
+        "most_recent_date": null,
         "details": [
           "Professional credential terms detected (e.g. 'Registered Physiotherapist')."
         ]
@@ -493,8 +583,30 @@
         "fixed_wide_count": 0,
         "img_count": 0,
         "imgs_missing_dims": 0,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100,
         "render_blocking_scripts": 3,
         "html_size_bytes": 85729
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": null,
+        "lcp": null,
+        "cls": null,
+        "speed_index": null,
+        "status": "skipped",
+        "error_detail": "PageSpeed API key not configured",
+        "details": [
+          "Google PageSpeed Insights skipped (no API key). To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."
+        ]
       }
     }
   ],

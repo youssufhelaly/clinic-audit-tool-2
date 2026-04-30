@@ -1,7 +1,7 @@
 {
   "url": "https://activphysio.ca/",
   "business_name": "ACTIV Physio",
-  "audit_date": "2026-04-06",
+  "audit_date": "2026-04-13",
   "aggregated_signals": {
     "total_booking_count": 31,
     "booking_on_homepage": 4,
@@ -88,6 +88,14 @@
     "neighbourhood_mentioned": true,
     "google_map_on_contact": true,
     "has_local_schema": false,
+    "pages_with_meta_desc": 1,
+    "pages_with_proper_meta_desc": 1,
+    "homepage_has_meta_desc": true,
+    "total_images": 75,
+    "total_images_missing_alt": 2,
+    "alt_coverage_pct": 97.3,
+    "best_pagespeed_score": 59,
+    "homepage_pagespeed": 42,
     "mobile_readiness": {
       "homepage_has_viewport": true,
       "any_page_has_viewport": true,
@@ -122,7 +130,7 @@
       "Trust / Reviews": 6,
       "Contact Completeness": 10,
       "Insurance / Accessibility": 5,
-      "Mobile Readiness": 8
+      "Mobile Readiness": 7
     },
     "findings": {
       "Local Relevance": [
@@ -162,10 +170,11 @@
         "Janeapp booking link present on homepage — accessible on mobile.",
         "75 images found across all pages — high image count may slow mobile load times.",
         "48 images missing width/height attributes — may cause layout shift (CLS) on mobile.",
-        "Up to 28 render-blocking scripts detected (missing async/defer) — may delay initial page render on mobile."
+        "Up to 28 render-blocking scripts detected (missing async/defer) — may delay initial page render on mobile.",
+        "Google PageSpeed: Moderate mobile performance (59/100) — patients experience slow load times."
       ]
     },
-    "total": 50,
+    "total": 49,
     "max": 70
   },
   "priority_issues": [
@@ -270,8 +279,33 @@
         "fixed_wide_count": 0,
         "img_count": 22,
         "imgs_missing_dims": 6,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
         "render_blocking_scripts": 28,
         "html_size_bytes": 163906
+      },
+      "meta_descriptions": {
+        "has_description": true,
+        "length": 157,
+        "status": "ok",
+        "content_preview": "Your downtown Ottawa physio experts in Manual Therapy, Pelvic Health (all genders), Vestibular/Concu…",
+        "details": [
+          "Meta description present and properly sized."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": 42,
+        "lcp": "6.5 s",
+        "cls": "0.62",
+        "speed_index": "5.3 s",
+        "status": "warning",
+        "error_detail": null,
+        "details": [
+          "Poor mobile performance (42/100) — patients on phones wait too long.",
+          "Largest Contentful Paint: 6.5 s (target: <2.5s)",
+          "Cumulative Layout Shift: 0.62 (target: <0.1)",
+          "Speed Index: 5.3 s (target: <3.4s)"
+        ]
       }
     },
     {
@@ -348,8 +382,33 @@
         "fixed_wide_count": 0,
         "img_count": 11,
         "imgs_missing_dims": 9,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
         "render_blocking_scripts": 21,
         "html_size_bytes": 120779
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": 59,
+        "lcp": "8.0 s",
+        "cls": "0.028",
+        "speed_index": "8.9 s",
+        "status": "warning",
+        "error_detail": null,
+        "details": [
+          "Moderate mobile performance (59/100) — room for improvement.",
+          "Largest Contentful Paint: 8.0 s (target: <2.5s)",
+          "Cumulative Layout Shift: 0.028 (target: <0.1)",
+          "Speed Index: 8.9 s (target: <3.4s)"
+        ]
       }
     },
     {
@@ -428,8 +487,33 @@
         "fixed_wide_count": 0,
         "img_count": 7,
         "imgs_missing_dims": 5,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
         "render_blocking_scripts": 20,
         "html_size_bytes": 159968
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": 41,
+        "lcp": "6.4 s",
+        "cls": "0.432",
+        "speed_index": "7.7 s",
+        "status": "warning",
+        "error_detail": null,
+        "details": [
+          "Poor mobile performance (41/100) — patients on phones wait too long.",
+          "Largest Contentful Paint: 6.4 s (target: <2.5s)",
+          "Cumulative Layout Shift: 0.432 (target: <0.1)",
+          "Speed Index: 7.7 s (target: <3.4s)"
+        ]
       }
     },
     {
@@ -512,8 +596,33 @@
         "fixed_wide_count": 0,
         "img_count": 7,
         "imgs_missing_dims": 5,
+        "imgs_missing_alt": 0,
+        "alt_coverage_pct": 100.0,
         "render_blocking_scripts": 19,
         "html_size_bytes": 139109
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": 40,
+        "lcp": "8.1 s",
+        "cls": "0.437",
+        "speed_index": "7.5 s",
+        "status": "warning",
+        "error_detail": null,
+        "details": [
+          "Poor mobile performance (40/100) — patients on phones wait too long.",
+          "Largest Contentful Paint: 8.1 s (target: <2.5s)",
+          "Cumulative Layout Shift: 0.437 (target: <0.1)",
+          "Speed Index: 7.5 s (target: <3.4s)"
+        ]
       }
     },
     {
@@ -598,8 +707,33 @@
         "fixed_wide_count": 0,
         "img_count": 28,
         "imgs_missing_dims": 23,
+        "imgs_missing_alt": 2,
+        "alt_coverage_pct": 92.9,
         "render_blocking_scripts": 20,
         "html_size_bytes": 148466
+      },
+      "meta_descriptions": {
+        "has_description": false,
+        "length": 0,
+        "status": "missing",
+        "content_preview": "",
+        "details": [
+          "Meta description missing — Google will pull random text from page for search snippet."
+        ]
+      },
+      "pagespeed": {
+        "mobile_score": 44,
+        "lcp": "6.2 s",
+        "cls": "0.447",
+        "speed_index": "7.2 s",
+        "status": "warning",
+        "error_detail": null,
+        "details": [
+          "Poor mobile performance (44/100) — patients on phones wait too long.",
+          "Largest Contentful Paint: 6.2 s (target: <2.5s)",
+          "Cumulative Layout Shift: 0.447 (target: <0.1)",
+          "Speed Index: 7.2 s (target: <3.4s)"
+        ]
       }
     }
   ],

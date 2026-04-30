@@ -1,0 +1,261 @@
+PHYSIOTHERAPY DATA BASE,,,,,,,,,,,,,,,,
+#,CLINIC,LOCATION,CONTACT,REVIEWS,RATING,WEBSITE PAGE,CONTACT PRIORITY,PROBLEMS TO TARGET,,,,,,,CHECKED BY,NOTES
+,,,,,,,,Local Relevance ,Services Visibility,Booking Conversion,Trust / Reviews,Contact Completeness,Insurance / Accessibility,Mobile Readiness,,
+1,Pro Physio & Sport Medicine - Carling (Carlingwood),Ottawa,"T : 613-747-8787
+E : Ottawa.Carlingwood@lifemark.ca",60,4.4,Link,,,,,,,,,,Pro Physio/Lifemark: ~24 locations in Ottawa region
+2,Pro Physio & Sport Medicine - Concession Rd (Kemptville area),Ottawa,"T : 613-656-1400
+E : info@prophysiotherapy.com",30,4.4,Link,,,,,,,,,,Pro Physio/Lifemark: ~24 locations in Ottawa region
+3,Lifemark Physiotherapy Broadview,Ottawa,"T : 613-722-7839
+E : Ottawa.Broadview@lifemark.ca",70,4.3,Link,,,,,,,,,,Lifemark: multiple Ottawa locations
+4,Ottawa Physiotherapy & Sport Clinics - Manor Park,Ottawa,"T : 613-783-1420
+E : mpphysiotherapy@optsc.com",45,4.4,Link,,,,,,,,,,OPTSC: 9 locations in Ottawa
+5,Physiocare Physiotherapy - Nepean,Ottawa,"T : 613-714-9495
+E : info@physiocarephysiotherapy.com",130,4.6,Link,,,,,,,,,,Physiocare: 8 locations in Ottawa
+6,Back on Track Physiotherapy - Hunt Club,Ottawa,"T : 613-521-5215
+E : info@backontrackphysio.com",85,4.6,Link,,,,,,,,,,Back on Track: 12 locations (Ottawa & area)
+7,Vitality Physiotherapy & Wellness - Ottawa,Ottawa,"T : 613-706-8424
+E : info@vitalitypt.ca",350,4.9,Link,,,,,,,,,,"Vitality: 3+ locations (Ottawa, Riverside South, Kanata)"
+8,Vitality Physiotherapy & Wellness - Riverside South,Ottawa,"T : 613-706-8424
+E : info@vitalitypt.ca",280,4.9,Link,,,,,,,,,,Vitality: 3+ locations
+9,Anatomy Physiotherapy Clinic - Orleans,Ottawa,"T : 613-801-1573
+E : info.orleans@anatomyphysioclinic.com",268,4.9,Link,,,,,,,,,,Anatomy: 4 locations in Ottawa
+10,Motion Matters Physiotherapy - Nepean,Ottawa,"T : 613-820-3773
+E : info@motionmatters.ca",75,4.7,Link,,,,,,,,,,Motion Matters: 2 locations
+11,ADM Ottawa Physiotherapy - Bells Corners,Ottawa,"T : 613-820-8765
+E : info@admottawaphysio.com",120,4.8,Link,,,,,,,,,,ADM: 2 locations
+12,ActiveCARE Physio - Nepean,Ottawa,"T : 613-383-5451
+E : info@acpottawa.ca",60,4.6,Link,,,,,,,,,,ActiveCARE: 4 locations
+13,MapleCare Physiotherapy - Wellington St (Hintonburg),Ottawa,"T : 613-691-1515
+E : info@maplecarephysiotherapy.com",80,4.5,Link,,,,,,,,,,MapleCare: 3 locations
+14,"MapleCare Physiotherapy - Woodroffe (Nepean, OHIP)",Ottawa,"T : 613-691-1515
+E : info@maplecarephysiotherapy.com",65,4.4,Link,,,,,,,,,,MapleCare: 3 locations
+15,MapleCare Physiotherapy - Bank St,Ottawa,"T : 613-691-1515
+E : info@maplecarephysiotherapy.com",50,4.4,Link,,,,,,,,,,MapleCare: 3 locations
+16,Expert Physio Plus - Carleton Place,Ottawa,"T : 613-800-9800
+E : info@expertphysioplus.com",40,4.6,Link,,,,,,,,,,Expert Physio Plus: 3 locations
+17,Kent Chiro-Med Wellness Clinic,Ottawa,"T : 613-508-0113
+E : info@kentchiromed.com",475,5.0,Link,,,,,,,,,,
+18,Elite Physio Ottawa (Kanata),Ottawa,"T : 613-690-6775
+E : info@elitephysioottawa.com",160,4.9,Link,,,,,,,,,,
+19,Greenboro Physiotherapy & Massage Clinic,Ottawa,"T : 613-738-8934
+E : N/A",95,4.7,Link,,,,,,,,,,
+20,"iBalance Physiotherapy, Sports & Wellness Centre",Ottawa,"T : 613-979-8633 | 613-963-3708
+E : N/A",234,5.0,Link,,,,,,,,,,
+21,Chartier Physiotherapie and Multidisciplinary Clinic,Ottawa,"T : 613-680-3993 | 819-525-7500
+E : info@chartierphysio.ca",272,5.0,Link,,,,,,,,,,
+22,Ottawa Carleton Physiotherapy & Sports Injury Center,Ottawa,"T : 613-789-0015
+E : info@ocphysio.com",140,4.6,Link,,,,,,,,,,
+23,Bellefleur Physiotherapy Beechwood,Ottawa,"T : 613-424-7852 | 613-695-7852 | 613-446-1114
+E : info@bellefleurphysio.com",67,4.8,Link,,,,,,,,,,
+24,Activa Physiotherapy Ottawa,Ottawa,"T : 613-744-4188
+E : N/A",112,4.9,Link,,,,,,,,,,
+25,Helix Physical Therapy and Massage,Ottawa,"T : 613-421-2311
+E : info.helixtherapy@gmail.com",102,5.0,Link,,,,,,,,,,
+26,Activ Physio,Ottawa,"T : 613-594-8512
+E : info@activphysio.ca",164,5,Link,,,,,,,,,,
+27,Glebe Physiotherapy and Sport Medicine,Ottawa,"T : 613-237-9000
+E : glebephysio@mcmartin.ca",85,4.7,Link,,,,,,,,,,
+28,AMPED Physiotherapy (Riverside South/Findlay Creek),Ottawa,"T : 613-822-9000
+E : physio@ampedsportslab.com",110,4.8,Link,,,,,,,,,,
+29,PhysioFirst Orthopaedic & Sports Centre (Beacon Hill),Ottawa,"T : 613-842-2416
+E : N/A",75,4.7,Link,,,,,,,,,,
+30,Ottawa Physical Rehab Clinic (Iris St),Ottawa,"T : 613-366-3032
+E : info@oprc.ca",90,4.7,Link,,,,,,,,,,
+31,Athlete's Care Ottawa (Bank St),Ottawa,"T : 613-232-9059
+E : info@athletescareottawa.ca",60,4.5,Link,,,,,,,,,,
+32,Pro Care Physiotherapy & Athletes' Injury Center,Ottawa,"T : 613-680-6505
+E : info@procarephysiotherapy.com",85,4.6,Link,,,,,,,,,,
+33,Ottawa Health: Performance and Rehabilitation (Bank St),Ottawa,"T : 613-728-6555
+E : info@ottawahealth.ca",100,4.8,Link,,,,,,,,,,
+33,Moveo Sports and Manual Physiotherapy,Ottawa,"T : 613-424-6683
+E : N/A",50,4.9,Link,1st Batch,,,,,,,,,
+35,Ottawa & District Physiotherapy,Ottawa,"T : 613-233-1235
+E : odpcphysiotherapy@gmail.com",15,3.9,Link,1st Batch,,,,,,,,,Publicly funded clinic
+36,Ottawa Sport Medicine Centre (Clyde Ave),Ottawa,"T : 613-727-2621
+E : ottawasport@prophysiotherapy.com",222,4.7,Link,,,,,,,,,,
+37,Orleans Family Physiotherapy Centre,Ottawa,"T : 613-837-7312
+E : N/A",60,4.5,Link,,,,,,,,,,
+38,Stittsville Sport Physiotherapy Centre,Ottawa,"T : 613-435-9100
+E : N/A",55,4.5,Link,,,,,,,,,,
+39,The Sports Medicine Clinic (Carleton University),Ottawa,"T : 613-520-3510
+E : medinfo@carletonsportsmed.com",186,4.1,Link,,,,,,,,,,University clinic
+40,PhysioVive (Barrhaven),Ottawa,"T : 613-440-8483
+E : info@physiovive.ca",50,4.6,Link,,,,,,,,,,
+41,CN Physiotherapy (Carling Ave),Ottawa,"T : 613-455-0262
+E : info@cnphysiotherapy.com",241,4.8,Link,,,,,,,,,,
+42,One Physiotherapy Stittsville,Ottawa,"T : 613-509-0255
+E : info@onephysioclinic.ca",174,5.0,Link,,,,,,,,,,3 Locations
+43,TEAL Physiotherapy (Montreal Road),Ottawa,"T : 613-424-0707
+E : info@tealphysio.com",797,4.9,Link,,,,,,,,,,
+44,Westgate Family Physiotherapy,Ottawa,"T : 613-715-9000
+E : N/A",11,4.6,Link,1st Batch,,,,,,,,,
+45,Ottawa Sport and Manual Physiotherapy,Ottawa,"T : 613-850-2839
+E : 1physiotherapist@gmail.com",N/A,N/A,N/A,1st Batch,,,,,,,,,"Owner named Rahim Khoja, no website available, no gooogle reviews, a broken link for a website on the CAMPT Profile"
+46,LiquidGym Rehab & Training Centre (Nepean),Ottawa,"T : 613-225-3717
+E : info@liquidgym.com",60,4.7,Link,,,,,,,,,,Aquatic/pool-based rehab
+47,PhysioExperts (Nepean),Ottawa,"T : 613-672-6000
+E : info@physioexperts.ca",120,4.8,Link,,,,,,,,,,
+48,Care2Cure Physiotherapy (Centretown),Ottawa,"T : 613-695-2273
+E : info@care2curephysio.ca",90,4.8,Link,,,,,,,,,,
+50,Sheryl Houde Physiotherapy (Orleans),Ottawa,"T : 613-837-1507
+E : N/A",20,4.5,N/A,,,,,,,,,,Independent practice/Part of Moveo that was added/ low priority contact
+51,PhysioOutaouais - Alexandre-Tache,Gatineau,"T : 819-775-9515
+E : po.tache@physiooutaouais.ca",85,4.6,Link,,,,,,,,,,PhysioOutaouais: 6+ locations in Gatineau
+52,MediSport Physio - Gatineau,Gatineau,"T : 819-205-1515
+E : info@medisportphysio.com",45,4.6,Link,,,,,,,,,,MediSport: 2 locations in Gatineau
+53,Clinique Physio Familiale - Aylmer,Gatineau,"T : 819-684-8883
+E : info@physiofamiliale.com",55,4.7,Link,,,,,,,,,,Physio Familiale: 2 locations in Gatineau
+54,"Centre TMO (Physiotherapie, Osteopathie)",Gatineau,"T : 819-777-4060
+E : info@centretmo.com",90,4.7,Link,,,,,,,,,,
+55,Physio Avantage Plus,Gatineau,"T : 819-643-7776
+E : info@physioavantageplus.com",70,4.8,Link,,,,,,,,,,
+56,Physio + Hamel,Gatineau,"T : 819-639-4425
+E : info@physioplushamel.com",95,4.8,Link,,,,,,,,,,
+57,Chiro Physio Gatineau,Gatineau,"T : 819-410-4070
+E : info@chirophysiogatineau.com",50,4.7,Link,,,,,,,,,,
+58,La Clinique du Kine,Gatineau,"T : 819-777-5463
+E : info@lacliniquedukinex.com",35,4.6,Link,,,,,,,,,,
+59,Centre de Physiotherapie et de Readaptation Montclair,Gatineau,"T : 819-246-6688
+E : N/A",20,"4,4",N/A,1st Batch,,,,,,,,,No website/email high priority to contact
+60,Physiotherapie Gatineau (Vaudreuil),Gatineau,"T : 819-771-7597
+E : N/A",5,5.0,N/A,1st Batch,,,,,,,,,No website/email high priority to contact
+61,TheraTouch Physiotherapy (Carling Ave),Ottawa,"T : 613-709-8001
+E : info@theratouchphysio.com",45,4.7,Link,,,,,,,,,,"Women-owned, pelvic floor specialty"
+62,MOOV Physiotherapy & Wellness (Downtown),Ottawa,"T : 613-909-3713
+E : info@moovphysiotherapy.ca",40,4.8,Link,,,,,,,,,,Boutique clinic
+63,Omniphyzio (Bells Corners / Orleans),Ottawa,"T : 343-353-1788
+E : info@omniphyzio.ca",50,4.9,Link,,,,,,,,,,"3 locations (Bells Corners, Downtown, Orleans)"
+64,Physioville (McCarthy Rd),Ottawa,"T : 343-227-0527
+E : N/A",5,5.0,https://physioville.ca/,1st Batch,,,,,,,,,Small independent clinic/website says clinic launching soon/priority contact
+65,Bloom Integrative Health & Movement (Carling Ave),Ottawa,"T : 613-725-9496
+E : info@bloomintegrativehealth.ca",80,4.8,Link,,,,,,,,,,"Bloom: 2 locations (Carling, Stittsville)"
+66,"Dynamic Physiotherapy and Chiropractic (Eagleson, Kanata)",Ottawa,"T : 613-435-9144
+E : info@dynamicottawa.ca",105,4.9,https://dynamicottawa.ca/,,,,,,,,,,
+67,Rooted Family Wellness Centre (Kanata),Ottawa,"T : 613-435-9200
+E : hello@rootedfamily.ca",190,5.0,https://www.rootedfamily.ca/,,,,,,,,,,
+68,"Ophysio Clinic (St Joseph Blvd, Orleans)",Ottawa,"T : 343-341-6904
+E : book@ophysioclinic.com",105,5.0,https://ophysioclinic.com/,,,,,,,,,,Small independent
+69,Ottawa Pelvic Health (Carling Ave),Ottawa,"T : 613-912-7604
+E : N/A",40,5.0,https://www.ottawapelvichealth.com/,,,,,,,,,,Pelvic floor specialty
+70,Strandherd Physiotherapy and Wellness,Ottawa,"T : 613-882-3335
+E : admin@strandherdphysio.ca",84,4.9,https://strandherdphysio.ca/,,,,,,,,,,Small independent
+71,Function Physiotherapy (Bank St),Ottawa,"T : 613-680-6505
+E : ​info@fxnphysio.com",183,4.9,https://www.fxnphysio.com/,,,,,,,,,,
+72,"Head, Neck & Jaw Physiotherapy (Carling Ave)",Ottawa,"T : 613-798-0004
+E : hnjphysio@gmail.com",8,4.5,https://headneckjawphysio.com/en/,1st Batch,,,,,,,,,TMJ specialty
+73,Pelvic Support Physiotherapy (Robertson Rd),Ottawa,"T : 613-726-3838
+E : info@pelvicsupport.com",15,4.9,https://www.pelvicsupport.com/,1st Batch,,,,,,,,,Pelvic floor specialty
+74,Neuroconnection Physiotherapy,Ottawa,"T : 613-518-2082
+E : N/A",15,4.6,N/A,,,,,,,,,,Neuro rehab specialty
+75,"Active Health Institute (Longfields Dr, Barrhaven)",Ottawa,"T : 613-825-7773
+E : N/A",40,4.6,N/A,,,,,,,,,,
+76,"Senses Physiotherapy & Massage Clinic (Baseline Rd, Nepean)",Ottawa,"T : 613-829-7367
+E : N/A",30,4.5,N/A,,,,,,,,,,
+77,Life Therapies (Richmond Rd),Ottawa,"T : 613-422-6939
+E : info@lifetherapies.ca",35,4.6,Link,,,,,,,,,,
+78,REclaim Physiotherapy (Kanata),Ottawa,"T : 343-314-0188
+E : N/A",20,4.6,N/A,,,,,,,,,,Small independent
+79,CBI Ottawa East (St Laurent Blvd),Ottawa,"T : 613-742-6108
+E : N/A",30,4.3,N/A,,,,,,,,,,CBI Health Group
+80,Artemis Wellness Centre (St Laurent Blvd),Ottawa,"T : 613-249-9779
+E : N/A",25,4.5,N/A,,,,,,,,,,
+81,Action Potential Rehabilitation (Merivale Rd),Ottawa,"T : 613-680-6400
+E : N/A",30,4.5,N/A,,,,,,,,,,
+82,Champlain Rehab Solutions (Queensview Dr),Ottawa,"T : 613-726-9823
+E : N/A",25,4.4,N/A,,,,,,,,,,
+83,"MedSport Ottawa (March Rd, Kanata)",Ottawa,"T : 613-763-1510
+E : N/A",20,4.5,N/A,,,,,,,,,,
+84,Integrate PhysioMed (Lewis St),Ottawa,"T : 613-230-7891
+E : N/A",25,4.5,N/A,,,,,,,,,,
+85,"Motion Works Physiotherapy (Innes Rd, Orleans)",Ottawa,"T : 613-714-9722
+E : N/A",30,4.5,N/A,,,,,,,,,,
+86,Common Ground Health and Wellness (Lancaster Rd),Ottawa,"T : 613-230-1010
+E : N/A",20,4.4,N/A,,,,,,,,,,
+87,"Intergr8therapy (Rockcliffe, Codds Rd)",Ottawa,"T : 613-979-7461
+E : N/A",15,4.5,N/A,,,,,,,,,,Small independent
+88,Core Connections Physiotherapy (Richmond Rd),Ottawa,"T : 613-291-2956
+E : N/A",15,4.6,N/A,,,,,,,,,,Small independent
+89,Optimize Physiotherapy & Sports Medicine (Spratt Rd),Ottawa,"T : 613-425-4211
+E : N/A",25,4.6,N/A,,,,,,,,,,
+90,HW Health - Physiotherapy & Sport Medicine (Baxter Rd),Ottawa,"T : 343-574-1788
+E : N/A",30,4.6,N/A,,,,,,,,,,
+91,613Physio (Sienna Private),Ottawa,"T : 613-899-9163
+E : N/A",15,4.5,N/A,,,,,,,,,,Small independent
+92,Wendy Boland PT (solo practitioner),Ottawa,"T : 613-878-1764
+E : N/A",10,4.5,N/A,,,,,,,,,,Solo practitioner
+93,"Sylvie Bouchard, Physiotherapist (Bay St)",Ottawa,"T : 613-408-3458
+E : N/A",10,4.5,N/A,,,,,,,,,,Solo practitioner
+94,"Jamil Aljallad, Physiotherapist (Orleans)",Ottawa,"T : 437-246-8301
+E : N/A",10,4.5,N/A,,,,,,,,,,Solo practitioner
+95,Third Line Health + Fitness,Ottawa,"T : 613-869-6335
+E : N/A",15,4.5,N/A,,,,,,,,,,Small independent
+96,CommuniCare Therapy Ottawa (St Laurent Blvd),Ottawa,"T : 613-738-2871
+E : N/A",20,4.4,N/A,,,,,,,,,,
+97,Nepean Sports Medicine & Physiotherapy Centre,Ottawa,"T : 613-727-5755
+E : info@nepeansportsmedicine.ca",60,4.6,Link,,,,,,,,,,
+98,The Sport Medicine Clinic - Ottawa Campus (King Edward),Ottawa,"T : 613-416-8902
+E : N/A",30,4.5,N/A,,,,,,,,,,
+99,Orleans Centre for Physiotherapy (St Joseph Blvd),Ottawa,"T : 613-830-3145
+E : N/A",25,4.5,N/A,,,,,,,,,,Small independent
+100,CN Physiotherapy - Orleanswood,Ottawa,"T : 613-834-5552
+E : N/A",20,4.5,N/A,,,,,,,,,,CN Physio: 2 locations
+101,Momentum Physiotherapy (at Amped Sports Lab),Ottawa,"T : 613-822-0101
+E : N/A",15,4.5,N/A,,,,,,,,,,Inside Amped Sports Lab
+102,Ottawa Collaborative Care Centre (Lewis St),Ottawa,"T : 613-230-7891
+E : N/A",20,4.5,N/A,,,,,,,,,,
+103,"Carrefour sante Aline Chretien (Mer-Bleue, Orleans)",Ottawa,"T : 613-288-5344
+E : N/A",25,4.4,N/A,,,,,,,,,,Community health centre
+104,Ottawa Orthopaedic Centre (Woodroffe Ave),Ottawa,"T : 613-714-9447
+E : N/A",20,4.4,N/A,,,,,,,,,,Orthopaedic focused
+105,Curavita Health Group - Glebe,Ottawa,"T : 613-237-9000
+E : info.glebe@curavita.com",200,4.8,Link,,,,,,,,,,"Curavita: 2 locations (Glebe, Byward Market)"
+106,Alta Vista Chiropractic & Massage Clinic (has physio),Ottawa,"T : 613-731-5775
+E : N/A",60,4.6,Link,,,,,,,,,,
+107,Physiotherapy iQ Sports Clinic,Ottawa,"T : 613-800-0676
+E : N/A",50,4.7,N/A,,,,,,,,,,
+108,Human 2.0,Ottawa,"T : 613-260-0808
+E : N/A",40,4.7,N/A,,,,,,,,,,
+109,Prime Physio Canada,Ottawa,"T : 613-422-5070
+E : N/A",35,4.7,N/A,,,,,,,,,,
+110,Matthew Boyd Physio,Ottawa,"T : N/A
+E : N/A",20,4.8,N/A,,,,,,,,,,Solo practitioner
+111,Vijay Sharma Physiotherapy,Ottawa,"T : N/A
+E : N/A",30,4.8,N/A,,,,,,,,,,Solo practitioner
+112,Physio Sports Care Centre,Ottawa,"T : N/A
+E : N/A",25,4.5,N/A,,,,,,,,,,
+113,Ottawa Osteopathy & Sports Therapy (Bank St),Ottawa,"T : 613-366-2424
+E : info@ottawaosteopath.com",35,4.7,Link,,,,,,,,,,Also offers physio services
+114,Athlete's Care - Bank Street,Ottawa,"T : 613-383-0458
+E : N/A",45,4.5,Link,,,,,,,,,,Athlete's Care: also has Walkley Rd location
+115,Athlete's Care - Walkley Rd,Ottawa,"T : 613-383-0458
+E : N/A",30,4.4,Link,,,,,,,,,,Athlete's Care: 2 locations
+116,Bastien Physio+ (Rockland/Orleans area),Ottawa,"T : 613-487-2222
+E : N/A",20,4.5,N/A,,,,,,,,,,Serves east Ottawa/Orleans
+117,Carleton Sport Medicine Clinic (Carleton University),Ottawa,"T : 613-520-3511
+E : N/A",25,4.4,N/A,,,,,,,,,,University-affiliated
+118,Hunt Club Physiotherapy Clinic,Ottawa,"T : 613-521-5215
+E : N/A",45,4.6,N/A,,,,,,,,,,
+119,Nepean Sports Medicine & Physiotherapy Centre,Ottawa,"T : 613-727-5755
+E : info@nepeansportsmedicine.ca",60,4.6,Link,,,,,,,,,,
+120,,,"T :
+E :",,,,,,,,,,,,,
+121,,,"T :
+E :",,,,,,,,,,,,,
+122,,,"T :
+E :",,,,,,,,,,,,,
+123,,,"T :
+E :",,,,,,,,,,,,,
+124,,,"T :
+E :",,,,,,,,,,,,,
+125,,,"T :
+E :",,,,,,,,,,,,,
+126,,,"T :
+E :",,,,,,,,,,,,,
+127,,,"T :
+E :",,,,,,,,,,,,,
+128,,,"T :
+E :",,,,,,,,,,,,,
+129,,,"T :
+E :",,,,,,,,,,,,,
+130,,,"T :
+E :",,,,,,,,,,,,,
