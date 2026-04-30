@@ -21,6 +21,7 @@ import io
 import os
 from datetime import datetime
 from urllib.parse import urlparse, urljoin, urlunparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Force UTF-8 output so Unicode bar/dash chars render correctly on all platforms
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
@@ -37,7 +38,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # ---------------------------------------------------------------------------
 # REQUEST DEFAULTS
 # ---------------------------------------------------------------------------
-REQUEST_TIMEOUT = 12
+REQUEST_TIMEOUT = 20  # Increased to 20s for slower pages or rate-limited responses
 REQUEST_HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (compatible; ClinicAuditor/1.0; +https://example.com)"
@@ -49,6 +50,8 @@ REQUEST_HEADERS = {
 # ---------------------------------------------------------------------------
 SEED_PATHS = [
     "/services",
+    "/treatments",
+    "/conditions",
     "/contact",
     "/about",
     "/team",
@@ -56,12 +59,16 @@ SEED_PATHS = [
     "/booking",
     "/appointment",
     "/faq",
+    "/reviews",
+    "/testimonials",
 ]
 
 # Keywords that make an internal link "relevant" enough to include in crawl
 RELEVANT_LINK_WORDS = {
     "service", "contact", "about", "team", "book", "booking",
-    "appointment", "faq", "treatment", "physio",
+    "appointment", "faq", "treatment", "physio", "condition", "therapy",
+    "schedule", "reserve", "testimonial", "review", "specialist", "doctor",
+    "clinic", "center", "staff", "provider", "patient", "hour",
 }
 
 # Paths to skip even if they contain relevant words (noise exclusions)
@@ -177,7 +184,8 @@ BOOKING_PLATFORM_SIGNATURES = {
     "Noterro": ["noterro.com"],
     "Mindbody": ["mindbodyonline.com", "mindbody.io"],
     "PhysiTrack": ["physitrack.com"],
-    "Medexa":     ["medexa.com"],            # Used by some Quebec/bilingual clinics
+    "Medexa": ["medexa.com"],
+    "Juvono": ["juvono.com", "juvono.co"],
 }
 
 # Phrases indicating patients must call to book (phone-only friction)
@@ -211,10 +219,14 @@ REVIEW_WIDGET_SIGNATURES = [
 # Review platform link domains and their display names
 REVIEW_PLATFORM_DOMAINS = {
     "Google Business": ["google.com/maps", "g.page", "maps.app.goo"],
-    "RateMDs":         ["ratemds.com"],
+    "Facebook":        ["facebook.com", "fb.com"],
+    "Instagram":       ["instagram.com"],
     "Yelp":            ["yelp.com", "yelp.ca"],
+    "RateMDs":         ["ratemds.com"],
     "Healthgrades":    ["healthgrades.com"],
     "RateABiz":        ["rateabiz.com"],
+    "Waze":            ["waze.com"],
+    "ProvenExpert":    ["provenexpert.com"],
 }
 
 # Credential terms that appear in team bios / about pages
@@ -373,22 +385,50 @@ def path_is_relevant(path: str) -> bool:
 def fetch_page(url: str) -> str | None:
     """
     Fetch HTML for a URL. Returns raw HTML string or None on failure.
+    Includes retry logic with incremental backoff for transient failures.
     verify=False is intentional for dev/testing — remove for production.
     """
-    try:
-        response = requests.get(
-            url,
-            headers=REQUEST_HEADERS,
-            timeout=REQUEST_TIMEOUT,
-            verify=False,       # dev-only: skip SSL verification
-            allow_redirects=True,
-        )
-        if response.status_code == 200:
-            return response.text
-        # treat 404s / 40x silently — page just doesn't exist
-        return None
-    except requests.RequestException:
-        return None
+    import time
+    max_retries = 3
+    retry_count = 0
+    backoff_delay = 0.5  # Start with 0.5 second delay
+
+    while retry_count < max_retries:
+        try:
+            response = requests.get(
+                url,
+                headers=REQUEST_HEADERS,
+                timeout=REQUEST_TIMEOUT,
+                verify=False,       # dev-only: skip SSL verification
+                allow_redirects=True,
+            )
+            if response.status_code == 200:
+                return response.text
+            # treat 404s / 40x silently — page just doesn't exist (don't retry)
+            if response.status_code >= 400:
+                return None
+            # 5xx errors: retry with backoff
+            if response.status_code >= 500:
+                retry_count += 1
+                if retry_count < max_retries:
+                    time.sleep(backoff_delay * retry_count)
+                continue
+            return None
+        except requests.Timeout:
+            # Timeout: retry with backoff
+            retry_count += 1
+            if retry_count < max_retries:
+                time.sleep(backoff_delay * retry_count)
+            continue
+        except requests.RequestException:
+            # Other errors: retry with backoff
+            retry_count += 1
+            if retry_count < max_retries:
+                time.sleep(backoff_delay * retry_count)
+            continue
+
+    # All retries exhausted
+    return None
 
 
 # ===========================================================================
@@ -426,11 +466,13 @@ def extract_h1(html: str) -> str:
 def extract_internal_links(html: str, base_url: str, base_domain: str) -> list[str]:
     """
     Find all internal <a href> links in the HTML.
-    Returns a de-duplicated list of normalized absolute URLs.
+    Also captures link text (anchor text) for relevance scoring.
+    Returns a de-duplicated list of normalized absolute URLs, sorted by relevance.
     """
     soup = BeautifulSoup(html, "html.parser")
     seen = set()
-    links = []
+    links_with_text = []
+
     for tag in soup.find_all("a", href=True):
         href = tag["href"].strip()
         if not href or href.startswith("#") or href.startswith("mailto:") or href.startswith("tel:"):
@@ -441,10 +483,26 @@ def extract_internal_links(html: str, base_url: str, base_domain: str) -> list[s
             continue
         if not same_domain(normalized, base_domain):
             continue
-        if normalized not in seen:
-            seen.add(normalized)
-            links.append(normalized)
-    return links
+        if normalized in seen:
+            continue
+
+        seen.add(normalized)
+
+        # Capture link text for relevance scoring
+        link_text = (tag.get_text() or "").strip().lower()
+        path = urlparse(normalized).path.lower()
+
+        # Score relevance: check both path AND link text
+        path_relevance = any(word in path for word in RELEVANT_LINK_WORDS)
+        text_relevance = any(word in link_text for word in RELEVANT_LINK_WORDS)
+        relevance_score = int(path_relevance) + int(text_relevance)  # 0, 1, or 2
+
+        links_with_text.append((relevance_score, normalized, link_text, path))
+
+    # Sort by relevance (high to low), maintaining stable order
+    links_with_text.sort(key=lambda x: -x[0])
+
+    return [url for _, url, _, _ in links_with_text]
 
 
 # ===========================================================================
@@ -483,14 +541,15 @@ def collect_candidate_pages(homepage_url: str, homepage_html: str, base_domain: 
     Build a focused list of pages to audit:
       1. Homepage itself
       2. Known seed paths (if they return 200)
-      3. Relevant internal links found on the homepage
+      3. Relevant internal links found on the homepage (capped to avoid excessive crawling)
 
-    Returns a de-duplicated list of normalized URLs.
+    Returns a de-duplicated list of normalized URLs, limited to ~15 pages max for performance.
+    Location pages are excluded (redundant for single clinic audits - same booking/services/insurance).
     """
     candidates = set()
     candidates.add(normalize_url(homepage_url))
 
-    # 1) Seed paths
+    # 1) Seed paths (always include these if they exist)
     parsed_home = urlparse(homepage_url)
     for path in SEED_PATHS:
         seed_url = normalize_url(
@@ -499,11 +558,28 @@ def collect_candidate_pages(homepage_url: str, homepage_html: str, base_domain: 
         candidates.add(seed_url)
 
     # 2) Relevant links from homepage
+    # Let link relevance scoring guide us - don't hardcode specific path patterns
+    # Every clinic has different URL structures, so we trust the dynamic discovery
     internal_links = extract_internal_links(homepage_html, homepage_url, base_domain)
+
     for link in internal_links:
-        path = urlparse(link).path
-        if path_is_relevant(path):
-            candidates.add(normalize_url(link))
+        path = urlparse(link).path.lower()
+        if not path_is_relevant(path):
+            continue
+
+        # Skip location pages entirely (redundant for clinic audits)
+        if "/locations" in path or "/location" in path:
+            continue
+
+        # Skip blog pages (noise)
+        if "/blog/" in path:
+            continue
+
+        candidates.add(normalize_url(link))
+
+        # Cap at 25 additional pages (beyond homepage + seeds) for crawl balance
+        if len(candidates) >= 26:  # 1 homepage + 25 others
+            break
 
     return sorted(candidates)
 
@@ -636,6 +712,80 @@ def detect_schema_markup(html: str) -> bool:
 
 
 # ===========================================================================
+# META DESCRIPTION DETECTION
+# ===========================================================================
+
+def detect_meta_descriptions(html: str) -> dict:
+    """
+    Check if page has a meta description tag and validate length.
+    Optimal length: 150-160 characters (Google's truncation point).
+
+    Returns:
+      has_description : bool
+      length          : int (0 if missing)
+      status          : 'missing' | 'too_short' | 'too_long' | 'ok'
+      content_preview : str (first 100 chars or empty)
+      details         : list[str] (findings)
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    meta_desc = soup.find("meta", attrs={"name": re.compile(r"^description$", re.I)})
+
+    if not meta_desc:
+        return {
+            "has_description": False,
+            "length": 0,
+            "status": "missing",
+            "content_preview": "",
+            "details": ["Meta description missing — Google will pull random text from page for search snippet."],
+        }
+
+    content = (meta_desc.get("content") or "").strip()
+    length = len(content)
+
+    if length == 0:
+        return {
+            "has_description": False,
+            "length": 0,
+            "status": "missing",
+            "content_preview": "",
+            "details": ["Meta description tag exists but is empty."],
+        }
+
+    preview = content[:100] + ("…" if len(content) > 100 else "")
+
+    if length < 120:
+        return {
+            "has_description": True,
+            "length": length,
+            "status": "too_short",
+            "content_preview": preview,
+            "details": [
+                f"Meta description too short ({length} chars). Recommended: 150-160 characters.",
+                f"Preview: '{preview}'"
+            ],
+        }
+    elif length > 160:
+        return {
+            "has_description": True,
+            "length": length,
+            "status": "too_long",
+            "content_preview": preview,
+            "details": [
+                f"Meta description too long ({length} chars). Google will truncate in search results.",
+                f"Target: 150-160 characters."
+            ],
+        }
+
+    return {
+        "has_description": True,
+        "length": length,
+        "status": "ok",
+        "content_preview": preview,
+        "details": ["Meta description present and properly sized."],
+    }
+
+
+# ===========================================================================
 # CONTACT QUALITY DETECTION
 # ===========================================================================
 
@@ -682,6 +832,117 @@ def detect_contact_quality(html: str, text: str) -> dict:
         "clickable_phone":          clickable_phone,
         "has_hours":                has_hours,
         "contact_in_header_footer": contact_in_header_footer,
+    }
+
+
+# ===========================================================================
+# REVIEW SCHEMA EXTRACTION
+# ===========================================================================
+
+def extract_review_schema(html: str) -> dict:
+    """
+    Extract review metrics from JSON-LD schema.
+    Returns:
+      rating_value: float | None (e.g., 4.7)
+      review_count: int | None (e.g., 42)
+      most_recent_date: str | None (e.g., "2024-11-15")
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    rating_value = None
+    review_count = None
+    most_recent_date = None
+
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(script.string or "{}")
+
+            # Look for aggregateRating in LocalBusiness, Organization, or AggregateRating schema
+            agg_rating = data.get("aggregateRating") or {}
+            if isinstance(agg_rating, dict):
+                if agg_rating.get("ratingValue"):
+                    rating_value = float(agg_rating.get("ratingValue"))
+                if agg_rating.get("reviewCount"):
+                    review_count = int(agg_rating.get("reviewCount"))
+
+            # Look for individual reviews with dates
+            reviews = data.get("review", [])
+            if isinstance(reviews, list):
+                for review in reviews:
+                    if isinstance(review, dict) and review.get("datePublished"):
+                        date_str = review.get("datePublished")
+                        if most_recent_date is None or date_str > most_recent_date:
+                            most_recent_date = date_str
+        except (json.JSONDecodeError, ValueError, TypeError):
+            continue
+
+    return {
+        "rating_value": rating_value,
+        "review_count": review_count,
+        "most_recent_date": most_recent_date,
+    }
+
+
+# ===========================================================================
+# TEAM CREDIBILITY DETECTION
+# ===========================================================================
+
+def detect_team_credibility(html: str, text: str) -> dict:
+    """
+    Detect team credentials, depth, and bio quality.
+
+    Returns:
+      has_team_page: bool — team page detected
+      team_member_count: int — approximate number of team members with credentials
+      has_detailed_bios: bool — team members have substantial bios (>100 chars per member)
+      credentialed_members: int — count of members with recognizable credentials
+      details: list[str] — findings about team
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    details = []
+
+    has_team_page = False
+    team_member_count = 0
+    credentialed_members = 0
+    has_detailed_bios = False
+
+    # Look for team member containers (common patterns)
+    # Could be: .team-member, [data-member], .staff-card, etc.
+    team_containers = soup.find_all(["div", "article"], class_=lambda x: x and any(
+        word in x.lower() for word in ["team", "staff", "member", "provider", "doctor", "therapist"]
+    ))
+
+    if team_containers:
+        has_team_page = True
+        team_member_count = len(team_containers)
+
+        # Check if members have credentials and bios
+        total_bio_length = 0
+        for container in team_containers:
+            container_text = container.get_text(strip=True)
+            total_bio_length += len(container_text)
+
+            # Check for credential keywords in container
+            if any(term.lower() in container_text.lower() for term in CREDENTIAL_TERMS):
+                credentialed_members += 1
+
+        # Average bio length per member
+        avg_bio_length = total_bio_length / len(team_containers) if team_containers else 0
+        has_detailed_bios = avg_bio_length > 100  # More than 100 chars per member = detailed
+
+        if credentialed_members > 0:
+            details.append(f"{credentialed_members}/{team_member_count} team members have recognizable credentials.")
+        else:
+            details.append(f"Team page shows {team_member_count} members but credentials not clearly listed.")
+
+        if has_detailed_bios:
+            details.append(f"Team members have detailed bios (avg {int(avg_bio_length)} characters) — builds credibility.")
+
+    return {
+        "has_team_page": has_team_page,
+        "team_member_count": team_member_count,
+        "credentialed_members": credentialed_members,
+        "has_detailed_bios": has_detailed_bios,
+        "details": details,
     }
 
 
@@ -806,6 +1067,17 @@ def detect_trust_signals(html: str, text: str) -> dict:
     if has_years_in_practice:
         details.append("Establishment date or years-in-practice language detected.")
 
+    # --- 8. Schema-based review metrics (Google rating + count + recency) ---
+    schema_data = extract_review_schema(html)
+    rating_value = schema_data.get("rating_value")
+    review_count = schema_data.get("review_count")
+    most_recent_date = schema_data.get("most_recent_date")
+
+    if rating_value is not None and review_count is not None:
+        details.append(f"Google review schema found: {rating_value}★ ({review_count} reviews).")
+    if most_recent_date:
+        details.append(f"Most recent review date in schema: {most_recent_date}.")
+
     return {
         "has_review_widget":       has_review_widget,
         "has_testimonial_content": has_testimonial_content,
@@ -815,6 +1087,9 @@ def detect_trust_signals(html: str, text: str) -> dict:
         "has_credentials":         has_credentials,
         "has_professional_assoc":  has_professional_assoc,
         "has_years_in_practice":   has_years_in_practice,
+        "rating_value":            rating_value,
+        "review_count":            review_count,
+        "most_recent_date":        most_recent_date,
         "details":                 details,
     }
 
@@ -828,7 +1103,7 @@ def detect_booking_system(html: str, url: str) -> dict:
     Detect what booking system (if any) is used on this page.
 
     Returns a dict with:
-      type         : 'platform' | 'form' | 'phone_only' | 'none'
+      type         : 'platform' | 'internal_booking' | 'form' | 'phone_only' | 'none'
       platform_name: str | None   (e.g. 'Janeapp')
       platform_links: list[str]   (sample hrefs/srcs where platform was found)
       has_contact_form: bool
@@ -837,9 +1112,10 @@ def detect_booking_system(html: str, url: str) -> dict:
 
     Detection order (highest confidence first):
       1. Known booking platform found in href/src/action/script → 'platform'
-      2. <form> tag present on a contact/booking page OR with booking-like fields → 'form'
-      3. Phone-only booking language in visible text → 'phone_only'
-      4. None of the above → 'none'
+      2. "Book Online" or similar button/link found → 'internal_booking'
+      3. <form> tag present on a contact/booking page OR with booking-like fields → 'form'
+      4. Phone-only booking language in visible text → 'phone_only'
+      5. None of the above → 'none'
     """
     soup = BeautifulSoup(html, "html.parser")
     text_lower = extract_visible_text(html)   # already lowercased
@@ -890,6 +1166,12 @@ def detect_booking_system(html: str, url: str) -> dict:
                 f"{platform_found} booking platform detected (found in: {sample})"
             ],
         }
+
+    # --- 2b. Check for "Book Online" buttons/links ---
+    # NOTE: Just finding a "Book Online" link is NOT enough to claim online booking capability.
+    # It could link to a contact form. We only mark it as internal_booking if we also
+    # confirm no contact form exists. For now, we skip this detection to avoid false positives.
+    # Real booking systems are detected via platform signatures (above) or contact form detection (below).
 
     # --- 3. Check for contact/booking forms ---
     has_contact_form = False
@@ -1132,12 +1414,20 @@ def detect_mobile_signals(html: str, url: str) -> dict:
                 fixed_wide_count += 1
                 break  # count once per element
 
-    # 7. Image count and missing dimensions
+    # 7. Image count and alt text audit
     all_imgs = soup.find_all("img")
     img_count = len(all_imgs)
     imgs_missing_dims = sum(
         1 for img in all_imgs
         if not (img.get("width") and img.get("height"))
+    )
+    imgs_missing_alt = sum(
+        1 for img in all_imgs
+        if not img.get("alt")
+    )
+    alt_coverage_pct = (
+        round(((img_count - imgs_missing_alt) / img_count * 100), 1)
+        if img_count > 0 else 100
     )
 
     # 8. Render-blocking scripts (external scripts without async or defer)
@@ -1159,19 +1449,145 @@ def detect_mobile_signals(html: str, url: str) -> dict:
         "fixed_wide_count": fixed_wide_count,
         "img_count": img_count,
         "imgs_missing_dims": imgs_missing_dims,
+        "imgs_missing_alt": imgs_missing_alt,
+        "alt_coverage_pct": alt_coverage_pct,
         "render_blocking_scripts": render_blocking_scripts,
         "html_size_bytes": html_size_bytes,
     }
 
 
 # ===========================================================================
+# GOOGLE PAGESPEED INSIGHTS INTEGRATION
+# ===========================================================================
+
+def check_google_pagespeed(url: str, api_key: str = None) -> dict:
+    """
+    Call Google PageSpeed Insights API to get real mobile performance metrics.
+    Requires API key from Google Cloud Console (free tier).
+    If api_key is None or API fails, returns graceful "skipped" response.
+
+    Returns:
+      mobile_score      : int (0-100, or None if skipped)
+      lcp               : str (e.g. "3.2 s")
+      cls               : str (e.g. "0.12")
+      speed_index       : str (e.g. "5.1 s")
+      status            : 'ok' | 'skipped' | 'error'
+      error_detail      : str (if status == 'error')
+      details           : list[str] (findings)
+    """
+    # If no API key provided, skip gracefully
+    if not api_key:
+        return {
+            "mobile_score": None,
+            "lcp": None,
+            "cls": None,
+            "speed_index": None,
+            "status": "skipped",
+            "error_detail": "PageSpeed API key not configured",
+            "details": ["Google PageSpeed Insights skipped (no API key). "
+                       "To enable: get free API key from Google Cloud Console & set GOOGLE_PAGESPEED_API_KEY env var."]
+        }
+
+    try:
+        # Use Google PageSpeed Insights API via googleapis.com (most reliable endpoint)
+        # Note: PageSpeed API runs full Lighthouse analysis, which can be slow
+        endpoint = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+        params = {
+            "url": url,
+            "key": api_key,
+            "strategy": "mobile",
+            "category": "performance"
+        }
+
+        # Lighthouse analysis takes time; use generous timeout (60s)
+        # If network blocks pagespeedonline.com, this endpoint typically works better
+        response = requests.get(endpoint, params=params, timeout=60)
+        response.raise_for_status()
+        data = response.json()
+
+        # Extract lighthouse results
+        lh_result = data.get("lighthouseResult", {})
+        categories = lh_result.get("categories", {})
+        audits = lh_result.get("audits", {})
+
+        # Performance score (0-100)
+        perf_score = categories.get("performance", {}).get("score")
+        mobile_score = round(perf_score * 100) if perf_score is not None else None
+
+        # Extract metric values
+        def get_metric(audit_key):
+            return audits.get(audit_key, {}).get("displayValue", None)
+
+        lcp = get_metric("largest-contentful-paint")
+        cls = get_metric("cumulative-layout-shift")
+        speed_index = get_metric("speed-index")
+
+        # Interpret score
+        if mobile_score is None:
+            status = "error"
+            detail = "Could not parse performance score from API response"
+        elif mobile_score >= 90:
+            status = "ok"
+            detail = f"Excellent mobile performance ({mobile_score}/100) — fast load time."
+        elif mobile_score >= 75:
+            status = "ok"
+            detail = f"Good mobile performance ({mobile_score}/100) — acceptable speed."
+        elif mobile_score >= 50:
+            status = "warning"
+            detail = f"Moderate mobile performance ({mobile_score}/100) — room for improvement."
+        else:
+            status = "warning"
+            detail = f"Poor mobile performance ({mobile_score}/100) — patients on phones wait too long."
+
+        details = [detail]
+        if lcp:
+            details.append(f"Largest Contentful Paint: {lcp} (target: <2.5s)")
+        if cls:
+            details.append(f"Cumulative Layout Shift: {cls} (target: <0.1)")
+        if speed_index:
+            details.append(f"Speed Index: {speed_index} (target: <3.4s)")
+
+        return {
+            "mobile_score": mobile_score,
+            "lcp": lcp,
+            "cls": cls,
+            "speed_index": speed_index,
+            "status": status,
+            "error_detail": None,
+            "details": details,
+        }
+
+    except requests.RequestException as e:
+        return {
+            "mobile_score": None,
+            "lcp": None,
+            "cls": None,
+            "speed_index": None,
+            "status": "error",
+            "error_detail": f"PageSpeed API error: {str(e)[:80]}",
+            "details": [f"Could not reach Google PageSpeed API: {str(e)[:120]}"],
+        }
+    except (KeyError, ValueError, TypeError) as e:
+        return {
+            "mobile_score": None,
+            "lcp": None,
+            "cls": None,
+            "speed_index": None,
+            "status": "error",
+            "error_detail": f"PageSpeed API response parsing failed: {str(e)[:80]}",
+            "details": ["Google PageSpeed API returned unexpected response format."],
+        }
+
+
+# ===========================================================================
 # PER-PAGE SIGNAL EXTRACTION
 # ===========================================================================
 
-def extract_page_signals(url: str, html: str) -> dict:
+def extract_page_signals(url: str, html: str, pagespeed_api_key: str = None) -> dict:
     """
     Extract all signals for a single page.
     Returns a dict suitable for the JSON output and report rendering.
+    pagespeed_api_key: Optional Google PageSpeed Insights API key for real mobile performance testing.
     """
     text = extract_visible_text(html)
     title = extract_title(html)
@@ -1186,10 +1602,13 @@ def extract_page_signals(url: str, html: str) -> dict:
     neighbourhood_detected = any(term in text for term in NEIGHBOURHOOD_TERMS)
     contact_quality = detect_contact_quality(html, text)
     trust_signals = detect_trust_signals(html, text)
+    team_credibility = detect_team_credibility(html, text)
     booking_system = detect_booking_system(html, url)
     map_embed = detect_map_embed(html)
     local_schema = detect_schema_markup(html)
     mobile_signals = detect_mobile_signals(html, url)
+    meta_descriptions = detect_meta_descriptions(html)
+    pagespeed = check_google_pagespeed(url, api_key=pagespeed_api_key)
 
     return {
         "url": url,
@@ -1207,9 +1626,12 @@ def extract_page_signals(url: str, html: str) -> dict:
         "neighbourhood_detected": neighbourhood_detected,
         "contact_quality": contact_quality,
         "trust_signals": trust_signals,
+        "team_credibility": team_credibility,
         "map_embed": map_embed,
         "local_schema": local_schema,
         "mobile_signals": mobile_signals,
+        "meta_descriptions": meta_descriptions,
+        "pagespeed": pagespeed,
     }
 
 
@@ -1255,13 +1677,13 @@ def assess_service_presentation(page_signals: list[dict], homepage_url: str) -> 
         path = urlparse(url_norm).path.lower().rstrip("/") or "/"
         is_homepage = (url_norm == homepage_norm)
 
-        # Dedicated sub-pages: path matches /services/<something>
-        if re.match(r"^/services?/.+", path):
+        # Dedicated sub-pages: path matches /services/<something>, /treatments/<something>, /conditions/<something>, etc.
+        if re.match(r"^/(services?|treatments?|conditions?)/.+", path):
             subpages_found.append(ps["url"])
 
         # Identify the root services page vs. sub-pages
-        is_services_root = path in ("/services", "/service")
-        is_services_page = "service" in path and not is_homepage
+        is_services_root = path in ("/services", "/service", "/treatments", "/treatment", "/conditions", "/condition", "/our-treatments", "/our-conditions")
+        is_services_page = any(kw in path for kw in ("service", "treatment", "condition")) and not is_homepage
 
         if is_homepage:
             homepage_service_count = len(ps["service_categories"])
@@ -1544,7 +1966,7 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
     booking_platform_on_homepage = False   # homepage itself links to a platform
     has_dedicated_booking_page = False     # /book or /appointment page has a platform
     booking_cta_on_homepage = False        # homepage has booking CTA keywords
-    _booking_rank = {"platform": 4, "form": 3, "phone_only": 2, "none": 1}
+    _booking_rank = {"platform": 4, "internal_booking": 3.5, "form": 3, "phone_only": 2, "none": 1}
     # Contact quality aggregation
     has_clickable_phone = False
     has_hours = False
@@ -1559,11 +1981,28 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
     has_credentials = False
     has_professional_assoc = False
     has_years_in_practice = False
+    best_rating_value = None
+    best_review_count = None
+    most_recent_review_date = None
+    # Team credibility aggregation
+    best_team_member_count = 0
+    best_credentialed_count = 0
+    has_detailed_team_bios = False
     # Local SEO aggregation
     city_in_title = False
     neighbourhood_mentioned = False
     google_map_on_contact = False
     has_local_schema = False
+    # Meta description aggregation
+    pages_with_meta_desc = 0
+    pages_with_proper_meta_desc = 0
+    homepage_has_meta_desc = False
+    # Image alt text aggregation
+    total_images = 0
+    total_images_missing_alt = 0
+    # PageSpeed aggregation
+    best_pagespeed_score = None
+    homepage_pagespeed = None
     # Insurance depth aggregation
     best_insurance_specificity = "none"
     insurance_providers_found = set()
@@ -1577,7 +2016,7 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
         url_norm = normalize_url(ps["url"])
         path = urlparse(url_norm).path.lower()
         is_homepage = (url_norm == homepage_norm)
-        is_services = "service" in path
+        is_services = any(kw in path for kw in ("service", "treatment", "condition"))
         is_key_page = is_homepage or is_services or "book" in path or "appointment" in path
 
         total_booking += ps["booking_keyword_count"]
@@ -1652,6 +2091,24 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
         if ts.get("has_years_in_practice"):
             has_years_in_practice = True
 
+        # Aggregate review schema metrics (Google rating + count + recency)
+        if ts.get("rating_value") is not None:
+            if best_rating_value is None or ts.get("rating_value") > best_rating_value:
+                best_rating_value = ts.get("rating_value")
+        if ts.get("review_count") is not None:
+            if best_review_count is None or ts.get("review_count") > best_review_count:
+                best_review_count = ts.get("review_count")
+        if ts.get("most_recent_date"):
+            if most_recent_review_date is None or ts.get("most_recent_date") > most_recent_review_date:
+                most_recent_review_date = ts.get("most_recent_date")
+
+        # Team credibility aggregation
+        tc = ps.get("team_credibility", {})
+        best_team_member_count = max(best_team_member_count, tc.get("team_member_count", 0))
+        best_credentialed_count = max(best_credentialed_count, tc.get("credentialed_members", 0))
+        if tc.get("has_detailed_bios"):
+            has_detailed_team_bios = True
+
         # Local SEO signals
         if ps.get("local_schema"):
             has_local_schema = True
@@ -1677,6 +2134,31 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
         # Dedicated booking page: path contains /book or /appointment AND has a platform
         if any(kw in path for kw in ("/book", "/appointment")) and bs_type == "platform":
             has_dedicated_booking_page = True
+
+        # Meta description aggregation
+        meta_desc = ps.get("meta_descriptions", {})
+        if meta_desc.get("has_description"):
+            pages_with_meta_desc += 1
+            if meta_desc.get("status") == "ok":
+                pages_with_proper_meta_desc += 1
+        if is_homepage and meta_desc.get("has_description"):
+            homepage_has_meta_desc = True
+
+        # Image alt text aggregation
+        ms = ps.get("mobile_signals", {})
+        img_count = ms.get("img_count", 0)
+        imgs_missing_alt = ms.get("imgs_missing_alt", 0)
+        total_images += img_count
+        total_images_missing_alt += imgs_missing_alt
+
+        # PageSpeed aggregation
+        ps_result = ps.get("pagespeed", {})
+        if ps_result.get("mobile_score") is not None:
+            score = ps_result.get("mobile_score")
+            if best_pagespeed_score is None or score > best_pagespeed_score:
+                best_pagespeed_score = score
+            if is_homepage:
+                homepage_pagespeed = score
 
     # City-in-title: check homepage title against known cities and neighbourhood terms
     title_lower = homepage_title.lower()
@@ -1727,7 +2209,14 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
         "max_testimonial_count": max_testimonial_count,
         "has_star_rating": has_star_rating,
         "review_platforms_linked": sorted(all_review_platforms),
+        "review_platform_count": len(all_review_platforms),
         "has_gbp_link": has_gbp_link,
+        "best_rating_value": best_rating_value,
+        "best_review_count": best_review_count,
+        "most_recent_review_date": most_recent_review_date,
+        "best_team_member_count": best_team_member_count,
+        "best_credentialed_count": best_credentialed_count,
+        "has_detailed_team_bios": has_detailed_team_bios,
         "has_credentials": has_credentials,
         "has_professional_assoc": has_professional_assoc,
         "has_years_in_practice": has_years_in_practice,
@@ -1738,6 +2227,14 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
         "neighbourhood_mentioned": neighbourhood_mentioned,
         "google_map_on_contact": google_map_on_contact,
         "has_local_schema": has_local_schema,
+        "pages_with_meta_desc": pages_with_meta_desc,
+        "pages_with_proper_meta_desc": pages_with_proper_meta_desc,
+        "homepage_has_meta_desc": homepage_has_meta_desc,
+        "total_images": total_images,
+        "total_images_missing_alt": total_images_missing_alt,
+        "alt_coverage_pct": round(((total_images - total_images_missing_alt) / total_images * 100), 1) if total_images > 0 else 100,
+        "best_pagespeed_score": best_pagespeed_score,
+        "homepage_pagespeed": homepage_pagespeed,
         "mobile_readiness": mobile_readiness,
     }
 
@@ -1952,90 +2449,182 @@ def score_site(agg: dict) -> dict:
 
     # ------------------------------------------------------------------
     # 4. TRUST / REVIEWS (out of 10) — quality-based tiers
-    # Tier logic matches plan-scoring-rewrite.md:
-    #   0     = no review or testimonial signals
-    #   1-2   = mentions reviews / has testimonials link but no actual content
-    #   3-4   = testimonial quotes displayed, no Google reviews or star rating
-    #   5-6   = testimonials + star rating OR review platform link
-    #   7-8   = review widget (embedded) + star rating + testimonials
-    #   9-10  = above + Google Business Profile link + credentials/years in practice
+    # NEW: Incorporates Google review count + rating + recency + multi-platform presence
+    # Tier logic:
+    #   0   = no review signals anywhere
+    #   1-2 = review language only (no actual content, ratings, or platforms)
+    #   3-4 = testimonials or widget or single platform, but weak corroboration
+    #   5-6 = testimonials + widget OR 2+ platforms OR vague Google rating
+    #   7-8 = substantial Google reviews (10-40 count) at good rating (4.5+) OR widget + 2+ platforms
+    #   9-10= 40+ Google reviews at 4.5+ rating OR 3+ platforms + recent activity + credentials
     # ------------------------------------------------------------------
-    has_widget    = agg.get("has_review_widget", False)
-    has_testim    = agg.get("has_testimonial_content", False)
-    testim_count  = agg.get("max_testimonial_count", 0)
-    has_stars     = agg.get("has_star_rating", False)
-    platforms     = agg.get("review_platforms_linked", [])
-    has_gbp       = agg.get("has_gbp_link", False)
-    has_creds     = agg.get("has_credentials", False)
-    has_years     = agg.get("has_years_in_practice", False)
-    rev_keywords  = agg.get("total_review_count", 0)
-    rev_findings  = []
+    has_widget      = agg.get("has_review_widget", False)
+    has_testim      = agg.get("has_testimonial_content", False)
+    testim_count    = agg.get("max_testimonial_count", 0)
+    has_stars       = agg.get("has_star_rating", False)
+    platforms       = agg.get("review_platforms_linked", [])
+    review_platform_count = agg.get("review_platform_count", 0)
+    has_gbp         = agg.get("has_gbp_link", False)
+    has_creds       = agg.get("has_credentials", False)
+    has_years       = agg.get("has_years_in_practice", False)
+    rev_keywords    = agg.get("total_review_count", 0)
+    rating_value    = agg.get("best_rating_value")
+    review_count    = agg.get("best_review_count")
+    most_recent_date = agg.get("most_recent_review_date")
+    rev_findings    = []
 
-    if not has_testim and not has_widget and not has_stars and not platforms and rev_keywords == 0:
+    # Helper: check if review is recent (within 180 days)
+    def is_recent_review(date_str):
+        if not date_str:
+            return False
+        try:
+            from datetime import datetime, timedelta
+            review_date = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            return (datetime.now(review_date.tzinfo) - review_date).days < 180
+        except:
+            return False
+
+    recent_reviews = is_recent_review(most_recent_date)
+
+    # --- Scoring Logic ---
+    if not has_testim and not has_widget and not has_stars and not platforms and review_count is None and rev_keywords == 0:
+        # TIER 0: No signals at all
         rev_score = 0
         rev_findings.append("No review, testimonial, or trust signals found anywhere on the site.")
 
-    elif not has_testim and not has_widget and not has_stars:
-        rev_score = 2
-        rev_findings.append(
-            "Review language detected (mentions, links) but no actual testimonial content or star ratings."
-        )
+    elif review_count is not None and review_count >= 30 and rating_value is not None and rating_value >= 4.5:
+        # TIER 9-10: Strong Google review presence (30+ reviews, 4.5+ rating)
+        if review_platform_count >= 3 and recent_reviews and (has_creds or has_years):
+            rev_score = 10
+            rev_findings.append(
+                f"Strong trust signals: {review_count} Google reviews at {rating_value}★, "
+                f"visible on {review_platform_count} platforms, recent activity, professional credentials."
+            )
+        elif review_platform_count >= 2 or recent_reviews:
+            rev_score = 9
+            rev_findings.append(
+                f"Strong Google review presence: {review_count} reviews at {rating_value}★"
+                + (f", recent activity within 180 days." if recent_reviews else f" across {review_platform_count} platforms.")
+            )
+        else:
+            rev_score = 8
+            rev_findings.append(f"{review_count} Google reviews at {rating_value}★ — substantial social proof.")
+
+    elif review_count is not None and review_count >= 15 and rating_value is not None and rating_value >= 4.0:
+        # TIER 7-8: Moderate Google review presence (15-40 reviews, 4.0+ rating)
+        if review_platform_count >= 2:
+            rev_score = 8
+            rev_findings.append(f"{review_count} Google reviews at {rating_value}★ across {review_platform_count} platforms — strong multi-platform trust.")
+        else:
+            rev_score = 7
+            rev_findings.append(f"{review_count} Google reviews at {rating_value}★ — good social proof established.")
+        if recent_reviews:
+            rev_findings.append("Recent reviews within last 6 months — ongoing patient satisfaction.")
+
+    elif review_count is not None and review_count >= 5 and rating_value is not None and rating_value >= 4.0:
+        # TIER 5-6: Growing Google review presence (5-15 reviews, 4.0+ rating)
+        if has_widget or review_platform_count >= 2:
+            rev_score = 6
+            rev_findings.append(f"{review_count} Google reviews at {rating_value}★ with multi-platform presence — solid foundation for trust.")
+        else:
+            rev_score = 5
+            rev_findings.append(f"{review_count} Google reviews at {rating_value}★ — early social proof, needs continued development.")
 
     elif has_widget:
-        # Embedded review widget — top tier base
+        # TIER 7-8: Embedded review widget (regardless of count)
         if has_gbp and (has_creds or has_years):
             rev_score = 9
             rev_findings.append(
-                "Embedded review widget detected with Google Business Profile link and trust signals (credentials or years in practice)."
+                "Embedded review widget with Google Business Profile link and professional credentials — demonstrates trust investment."
             )
         elif has_gbp or (has_stars and has_testim):
             rev_score = 8
             rev_findings.append(
-                "Embedded review widget detected" +
-                (", with Google Business Profile link." if has_gbp else ", star ratings and testimonials visible.")
+                "Embedded review widget" +
+                (", linked to Google Business Profile." if has_gbp else " with visible star ratings and testimonials.")
             )
         else:
             rev_score = 7
-            rev_findings.append("Embedded review widget detected.")
+            rev_findings.append("Embedded review widget detected — auto-updating social proof.")
 
-    elif has_testim and has_stars and platforms:
+    elif review_platform_count >= 3:
+        # TIER 7-8: Multi-platform presence (3+ platforms)
+        if review_count is not None:
+            rev_score = 7
+            rev_findings.append(f"Active on {review_platform_count} review platforms ({', '.join(platforms)}) — strong multi-platform strategy.")
+        else:
+            rev_score = 6
+            rev_findings.append(f"Present on {review_platform_count} review platforms — diversified trust signals.")
+
+    elif review_platform_count >= 2 and (has_stars or has_testim):
+        # TIER 6: Two platforms + additional trust signals
         rev_score = 6
         rev_findings.append(
-            f"Testimonial content, star ratings, and review platform link(s) detected ({', '.join(platforms)}) — "
-            "strong trust signals without an embedded widget."
+            f"Multi-platform presence ({', '.join(platforms)}) with " +
+            ("star ratings" if has_stars else "testimonial content") + " — solid trust foundation."
         )
 
-    elif has_testim and (has_stars or platforms):
+    elif has_testim and has_stars and review_platform_count >= 1:
+        # TIER 5-6: Testimonials + stars + at least one platform
+        rev_score = 6
+        rev_findings.append(
+            f"Testimonials, star rating, and link to {platforms[0] if platforms else 'review platform'} — strong non-embedded trust signals."
+        )
+
+    elif has_testim and (has_stars or review_platform_count >= 1):
+        # TIER 5: Testimonials + stars OR testimonials + one platform
         rev_score = 5
         if has_stars:
-            rev_findings.append("Testimonial content and star rating detected.")
-        if platforms:
-            rev_findings.append(f"Link(s) to review platform(s): {', '.join(platforms)}.")
+            rev_findings.append("Testimonial content with star rating visible — good trust foundation.")
+        if review_platform_count >= 1:
+            rev_findings.append(f"Link to {platforms[0]} — encourages external verification.")
 
     elif has_testim and testim_count >= 3:
+        # TIER 4: Multiple testimonials but no other signals
         rev_score = 4
-        rev_findings.append(
-            f"{testim_count} testimonial item(s) detected — no star rating or review platform link."
-        )
+        rev_findings.append(f"{testim_count} testimonials displayed — provides some voice but lacks external verification.")
 
-    elif has_testim or has_stars:
+    elif has_testim or has_stars or review_platform_count >= 1:
+        # TIER 3: Limited signals (one or two weak indicators)
         rev_score = 3
+        signals = []
         if has_testim:
-            rev_findings.append(f"{testim_count} testimonial item(s) detected — limited social proof.")
+            signals.append(f"{testim_count} testimonial(s)")
         if has_stars:
-            rev_findings.append("Star rating present but no testimonial content or platform link.")
+            signals.append("star rating")
+        if review_platform_count >= 1:
+            signals.append(f"{platforms[0]} link")
+        rev_findings.append(f"Limited trust signals: {', '.join(signals).capitalize()} — needs stronger corroboration.")
 
     else:
+        # TIER 2: Only keyword mentions
         rev_score = 2
-        rev_findings.append("Review signals present but no verifiable testimonial content found.")
+        rev_findings.append("Review language detected (mentions, links) but no actual testimonial content or current ratings.")
 
-    # Append supplemental trust signal notes
+    # --- Supplemental findings ---
+    if review_count is not None and review_count < 5:
+        rev_findings.append(f"Review volume is low ({review_count} reviews) — building more social proof would strengthen credibility.")
+    if most_recent_date and not recent_reviews:
+        months_old = "6+ months" if most_recent_date else "unknown"
+        rev_findings.append(f"Most recent review appears older than 6 months — implement active review request process.")
+    if review_platform_count == 1:
+        rev_findings.append("Only present on one review platform — adding 1-2 more would reduce risk of single-platform dependency.")
     if has_creds and rev_score < 9:
-        rev_findings.append("Professional credentials detected on team/about pages — adds trust.")
+        rev_findings.append("Professional credentials detected — reinforces trust.")
     if has_years and rev_score < 9:
-        rev_findings.append("Years in practice or establishment date mentioned.")
-    if not has_gbp and rev_score >= 5:
-        rev_findings.append("No Google Business Profile link found — adding one would strengthen trust.")
+        rev_findings.append("Years in practice mentioned — shows stability.")
+    if not has_gbp and rev_score >= 5 and review_count is None:
+        rev_findings.append("Missing Google Business Profile link — recommend adding for discoverability and reviews.")
+
+    # Schema data freshness note
+    if review_count is not None:
+        rev_findings.append(
+            "NOTE: Review count and rating from website schema markup. "
+            "Actual Google Business Profile may show higher numbers if schema hasn't been updated recently. "
+            "Verify on Google Maps for most current data."
+        )
+
+
 
     scores["Trust / Reviews"] = rev_score
     findings["Trust / Reviews"] = rev_findings
@@ -2189,6 +2778,36 @@ def score_site(agg: dict) -> dict:
     findings["Insurance / Accessibility"] = ins_findings
 
     # ------------------------------------------------------------------
+    # IMAGE ALT TEXT & META DESCRIPTIONS (supplemental findings)
+    # Add to Insurance/Accessibility or Local Relevance section
+    # ------------------------------------------------------------------
+    alt_coverage = agg.get("alt_coverage_pct", 100)
+    pages_with_desc = agg.get("pages_with_proper_meta_desc", 0)
+    pages_analyzed = agg.get("pages_with_meta_desc", 0) + (1 if not agg.get("pages_with_meta_desc", 0) else 0)  # at least 1 page
+
+    # Add alt text findings to Insurance/Accessibility findings
+    if agg.get("total_images", 0) > 0:
+        alt_missing = agg.get("total_images_missing_alt", 0)
+        alt_total = agg.get("total_images", 0)
+        if alt_coverage < 50:
+            findings["Insurance / Accessibility"].append(
+                f"Critical: {alt_missing}/{alt_total} images missing alt text ({100-alt_coverage:.0f}% gap). "
+                "This affects SEO and accessibility for blind visitors."
+            )
+        elif alt_coverage < 80:
+            findings["Insurance / Accessibility"].append(
+                f"Accessibility: {alt_missing}/{alt_total} images missing alt text ({100-alt_coverage:.0f}% gap). "
+                "Adding alt descriptions would improve search visibility and accessibility."
+            )
+
+    # Add meta description findings to Local Relevance
+    if pages_analyzed > 0 and pages_with_desc < pages_analyzed * 0.75:
+        findings["Local Relevance"].append(
+            f"Meta descriptions: {pages_with_desc}/{pages_analyzed} pages have proper descriptions. "
+            f"Missing descriptions mean Google pulls random text for search snippets — bad for CTR."
+        )
+
+    # ------------------------------------------------------------------
     # 7. MOBILE READINESS (out of 10) — quality-based tiers
     #
     # Hard caps applied after base scoring:
@@ -2216,6 +2835,18 @@ def score_site(agg: dict) -> dict:
     small_tap       = mr.get("small_tap_found", False)
     fixed_wide      = mr.get("fixed_wide_pages", [])
     mob_findings    = list(mr.get("findings", []))
+
+    # Add PageSpeed findings if available
+    ps_score = agg.get("best_pagespeed_score")
+    if ps_score is not None:
+        if ps_score >= 90:
+            mob_findings.append(f"Google PageSpeed: Excellent mobile performance ({ps_score}/100).")
+        elif ps_score >= 75:
+            mob_findings.append(f"Google PageSpeed: Good mobile performance ({ps_score}/100).")
+        elif ps_score >= 50:
+            mob_findings.append(f"Google PageSpeed: Moderate mobile performance ({ps_score}/100) — patients experience slow load times.")
+        else:
+            mob_findings.append(f"Google PageSpeed: Poor mobile performance ({ps_score}/100) — site loads too slowly on mobile networks.")
 
     speed_issues = sum([
         max_rbs > 4,
@@ -2249,6 +2880,11 @@ def score_site(agg: dict) -> dict:
     # Hard cap: booking not accessible on mobile → max 6
     if not book_mobile_ok:
         mob_score = min(mob_score, 6)
+    # Hard cap: poor PageSpeed score → max 5 (patients bounce on slow sites)
+    if ps_score is not None and ps_score < 50:
+        mob_score = min(mob_score, 5)
+    elif ps_score is not None and ps_score < 75:
+        mob_score = min(mob_score, 7)
 
     scores["Mobile Readiness"] = mob_score
     findings["Mobile Readiness"] = mob_findings
@@ -2751,6 +3387,9 @@ def main():
     print("  CLINIC WEBSITE AUDIT TOOL — v1")
     print("=" * 56)
 
+    # Get optional PageSpeed API key from environment
+    pagespeed_api_key = os.environ.get("GOOGLE_PAGESPEED_API_KEY")
+
     # --- Input ---
     raw_url = input("\nEnter clinic website URL: ").strip()
     if not raw_url:
@@ -2765,6 +3404,8 @@ def main():
     base_domain = urlparse(homepage_url).netloc.lstrip("www.")
 
     print(f"\nAuditing: {homepage_url}")
+    if not pagespeed_api_key:
+        print("(PageSpeed API disabled — set GOOGLE_PAGESPEED_API_KEY to enable mobile performance testing)")
     print("Fetching homepage...", end=" ", flush=True)
 
     # --- Fetch homepage ---
@@ -2784,26 +3425,73 @@ def main():
     candidates = collect_candidate_pages(homepage_url, homepage_html, base_domain)
     print(f"{len(candidates)} candidates")
 
-    # --- Fetch and analyze each page ---
+    # Show which pages will be crawled (for debugging/transparency)
+    print("\n  Pages to analyze:")
+    for i, url in enumerate(candidates, 1):
+        print(f"    {i}. {url}")
+    print()
+
+    # --- Fetch and analyze each page (parallel fetch + parallel analyze) ---
     print("Analyzing pages...")
     page_signals = []
     analyzed_urls = []
 
+    # Prepare list of pages to fetch (excluding homepage, which is already loaded)
+    pages_to_fetch = []
     for page_url in candidates:
         is_homepage = normalize_url(page_url) == normalize_url(homepage_url)
-        if is_homepage:
-            html = homepage_html   # already fetched
-        else:
-            print(f"  Fetching {page_url}...", end=" ", flush=True)
-            html = fetch_page(page_url)
-            if not html:
-                print("skipped (no response)")
-                continue
-            print("OK")
+        if not is_homepage:
+            pages_to_fetch.append(page_url)
 
-        signals = extract_page_signals(page_url, html)
-        page_signals.append(signals)
-        analyzed_urls.append(page_url)
+    # First, add homepage signals
+    signals = extract_page_signals(homepage_url, homepage_html, pagespeed_api_key=pagespeed_api_key)
+    page_signals.append(signals)
+    analyzed_urls.append(homepage_url)
+
+    # Fetch all pages in parallel (4 concurrent workers)
+    fetched_pages = {}  # url -> html mapping
+    if pages_to_fetch:
+        import time
+        with ThreadPoolExecutor(max_workers=2) as fetch_executor:  # Reduced from 4 to 2 to avoid rate limiting
+            future_to_url = {}
+            for idx, url in enumerate(pages_to_fetch):
+                # Stagger the requests slightly to avoid rate limiting
+                time.sleep(0.1 * idx)
+                future_to_url[fetch_executor.submit(fetch_page, url)] = url
+
+            # Collect all fetched pages
+            for future in as_completed(future_to_url):
+                page_url = future_to_url[future]
+                try:
+                    html = future.result()
+                    if html:
+                        fetched_pages[page_url] = html
+                        print(f"  {page_url}... fetched", flush=True)
+                    else:
+                        print(f"  {page_url}... skipped (no response)", flush=True)
+                except Exception as e:
+                    print(f"  {page_url}... skipped (fetch error: {e})", flush=True)
+
+    # Now analyze all fetched pages in parallel (4 concurrent workers)
+    if fetched_pages:
+        def analyze_page(url_html_tuple):
+            url, html = url_html_tuple
+            return url, extract_page_signals(url, html, pagespeed_api_key=pagespeed_api_key)
+
+        with ThreadPoolExecutor(max_workers=4) as analyze_executor:
+            futures = {
+                analyze_executor.submit(analyze_page, (url, html)): url
+                for url, html in fetched_pages.items()
+            }
+
+            # Collect analysis results
+            for future in as_completed(futures):
+                try:
+                    url, signals = future.result()
+                    page_signals.append(signals)
+                    analyzed_urls.append(url)
+                except Exception as e:
+                    print(f"  Analysis error: {e}", flush=True)
 
     if not page_signals:
         print("No pages could be analyzed. Exiting.")
