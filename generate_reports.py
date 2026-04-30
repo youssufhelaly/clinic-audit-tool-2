@@ -375,9 +375,9 @@ def main():
     
     # Build output filenames from domain
     domain = data["url"].split("//")[-1].split("/")[0].lstrip("www.").replace(".", "_")
-    
+
     brief_path = f"brief_{domain}.md"
-    pdf_path = f"report_{domain}.pdf"
+    pdf_path = f"outputs/report_{domain}.pdf"
     
     print(f"\nGenerating reports for: {data['business_name']}")
     print(f"  Source: {json_path}")
