@@ -995,10 +995,8 @@ def detect_trust_signals(html: str, text: str) -> dict:
 
     # elements with testimonial/review/quote in class or id
     # Only count leaf-level items (elements that do NOT contain another matching element).
-    # This prevents containers like .sow-testimonials from being counted alongside
-    # their children .sow-testimonial, which would inflate the count for each testimonial.
     if testimonial_count == 0:
-        _TESTIM_KWS = ("testimonial", "review-item", "quote", "client-review")
+        _TESTIM_KWS = ("testimonial", "review-item", "quote", "client-review", "client-testimonial", "review-box", "review-card")
         matching_elems = []
         for elem in soup.find_all(True):
             cls = " ".join(elem.get("class") or []).lower()
@@ -1015,12 +1013,38 @@ def detect_trust_signals(html: str, text: str) -> dict:
             if not has_child_match:
                 testimonial_count += 1
 
+    # Look for testimonial sections by heading text + quote patterns
+    # e.g., "What Our Clients Say" heading + paragraphs below with quotes
+    if testimonial_count == 0:
+        testimonial_section_keywords = ["what.*say", "client.*feedback", "customer.*review", "testimonial", "success.*stories?", "client.*stories?"]
+        # Find headings with testimonial keywords
+        for heading in soup.find_all(["h1", "h2", "h3", "h4"]):
+            heading_text = heading.get_text(strip=True).lower()
+            if any(re.search(kw, heading_text, re.IGNORECASE) for kw in testimonial_section_keywords):
+                # Found a testimonial section heading, count quote-like paragraphs after it
+                parent = heading.parent
+                if parent:
+                    for elem in parent.find_all(["p", "div"]):
+                        elem_text = elem.get_text(strip=True)
+                        # Look for quote patterns: text in quotes, or customer name + comment
+                        if (len(elem_text) > 40 and
+                            ('"' in elem_text or "'" in elem_text or  # Quoted text
+                             re.search(r'[A-Z][a-z]+\s+[A-Z][a-z]+:', elem_text) or  # Name: comment
+                             re.search(r'★{2,}', elem_text) or  # Star ratings
+                             any(phrase in elem_text.lower() for phrase in ["great", "excellent", "highly recommend", "amazing", "wonderful", "loved", "professional", "helpful"]))):
+                            testimonial_count += 1
+                            if testimonial_count >= 3:  # Cap at 3 to avoid over-counting
+                                break
+                    if testimonial_count > 0:
+                        break
+
     # Review JSON-LD schema
-    for script in soup.find_all("script", type="application/ld+json"):
-        content = (script.string or "").lower()
-        if '"@type"' in content and ('"review"' in content or '"aggregaterating"' in content):
-            testimonial_count = max(testimonial_count, 1)
-            break
+    if testimonial_count == 0:
+        for script in soup.find_all("script", type="application/ld+json"):
+            content = (script.string or "").lower()
+            if '"@type"' in content and ('"review"' in content or '"aggregaterating"' in content):
+                testimonial_count = max(testimonial_count, 1)
+                break
 
     has_testimonial_content = testimonial_count > 0
     if has_testimonial_content:
@@ -1730,9 +1754,7 @@ def assess_service_presentation(page_signals: list[dict], homepage_url: str) -> 
 
         # Identify the root services page vs. sub-pages
         is_services_root = path in ("/services", "/service", "/treatments", "/treatment", "/conditions", "/condition", "/our-treatments", "/our-conditions")
-
-        # Is this a services-related page? (root OR individual service page)
-        is_services_page = (any(kw in path for kw in ("service", "treatment", "condition")) or is_direct_service) and not is_homepage
+        is_services_page = any(kw in path for kw in ("service", "treatment", "condition")) and not is_homepage
 
         if is_homepage:
             homepage_service_count = len(ps["service_categories"])
@@ -2504,6 +2526,14 @@ def score_site(agg: dict) -> dict:
     elif has_desc and svc_count >= 5 and has_subpages:
         svc_score = 8
         svc_findings.insert(0, "Strong service presentation: descriptions and dedicated sub-pages detected.")
+    elif has_subpages and n_subpages >= 3 and svc_count >= 5:
+        # Multiple service subpages detected (e.g. /physiotherapy, /massage-therapy) — significant quality indicator
+        svc_score = 7
+        svc_findings.insert(0, f"Strong service presentation: {n_subpages} dedicated service pages found with {svc_count} service categories.")
+    elif has_subpages and n_subpages >= 2 and svc_count >= 3:
+        # At least 2 service subpages with adequate category count
+        svc_score = 6
+        svc_findings.insert(0, f"Good service presentation: {n_subpages} dedicated service pages found.")
     elif has_desc and svc_count >= 5:
         svc_score = 7
         svc_findings.insert(0, "Services page has descriptions and 5+ categories on homepage — missing dedicated sub-pages.")
@@ -2516,6 +2546,10 @@ def score_site(agg: dict) -> dict:
     elif has_svc_page and svc_count >= 3:
         svc_score = 5
         svc_findings.insert(0, "Services page exists with 3+ categories — appears to be a name list without descriptions or sub-pages.")
+    elif has_subpages and n_subpages >= 1:
+        # At least one dedicated service page (better than nothing)
+        svc_score = 5
+        svc_findings.insert(0, f"Services found on {n_subpages} dedicated page(s) but limited homepage visibility.")
     else:
         svc_score = 4
         svc_findings.insert(0, "Services mentioned on homepage but limited — no services page or fewer than 3 categories.")
@@ -2767,11 +2801,9 @@ def score_site(agg: dict) -> dict:
             "Verify on Google Maps for most current data."
         )
 
-    # --- CRITICAL: Penalize misleading review claims ---
-    has_misleading_claim = agg.get("has_misleading_review_claim", False)
-    if has_misleading_claim:
-        rev_score = max(1, rev_score - 4)  # Severe penalty for false/inflated claims
-        rev_findings.insert(0, "⚠️ CRITICAL: Site displays inaccurate review ratings (claimed vs. actual mismatch). This damages credibility.")
+    # --- Note: Removed misleading rating warning ---
+    # Previous version flagged claimed vs. schema mismatches, but this produced false positives.
+    # Sites often have outdated claims without corresponding schema. Better to trust schema data.
 
     scores["Trust / Reviews"] = rev_score
     findings["Trust / Reviews"] = rev_findings
