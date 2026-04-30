@@ -2278,6 +2278,95 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
 
 
 # ===========================================================================
+# DESIGN & ACCESSIBILITY ASSESSMENT (non-scored findings)
+# ===========================================================================
+
+def assess_design_quality(agg: dict, page_signals: list[dict]) -> dict:
+    """
+    Assess design and accessibility without scoring.
+    Returns flags and recommendations for design improvements.
+    """
+    findings = []
+
+    # --- Image optimization ---
+    total_images = agg.get("total_images", 0)
+    alt_coverage = agg.get("alt_coverage_pct", 100)
+
+    if total_images > 80:
+        findings.append(f"⚠️  Visual clutter: {total_images} images across all pages — consider optimization to reduce load time.")
+    elif total_images > 0 and alt_coverage < 80:
+        findings.append(f"⚠️  Accessibility: {int(agg.get('total_images_missing_alt', 0))} images missing alt text ({100-alt_coverage:.0f}% coverage) — hurts SEO and accessibility.")
+    elif total_images == 0:
+        findings.append("ℹ️  No images detected — text-heavy or missing visual content.")
+
+    # --- Mobile readiness ---
+    mobile = agg.get("mobile_readiness", {})
+    font_issues = mobile.get("small_tap_found", False)
+    if font_issues:
+        findings.append("⚠️  Typography: Font sizes below 14px detected — difficult to read on mobile devices.")
+
+    render_blockers = mobile.get("render_blockers", 0)
+    if render_blockers >= 5:
+        findings.append(f"⚠️  Performance: {render_blockers} render-blocking scripts detected — may delay page load on slow connections.")
+
+    large_pages = mobile.get("pages_over_500kb", 0)
+    if large_pages > 0:
+        findings.append(f"⚠️  Performance: {large_pages} page(s) exceed 500KB — slow on mobile networks.")
+
+    # Check mobile readiness based on actual viewport detection
+    has_mobile_viewport = agg.get("mobile_readiness", {}).get("any_page_has_viewport", False)
+    has_media_queries = agg.get("mobile_readiness", {}).get("has_media_queries", False)
+    if has_mobile_viewport and has_media_queries:
+        findings.append("✓ Mobile responsive: Viewport meta tag and responsive CSS detected.")
+    elif has_mobile_viewport:
+        findings.append("✓ Mobile viewport: Configured for mobile devices.")
+    else:
+        findings.append("⚠️  Not mobile-responsive: Missing viewport meta tag — site may not adapt to mobile screen sizes.")
+
+    # --- Navigation ---
+    internal_link_count = sum(len(ps.get("internal_links", [])) for ps in page_signals)
+    if internal_link_count > 50:
+        findings.append(f"⚠️  Navigation complexity: {internal_link_count} internal links detected — site structure may be confusing.")
+    elif internal_link_count < 5:
+        findings.append("⚠️  Sparse navigation: Very few internal links — patients may not find important pages.")
+
+    # --- Meta descriptions (SEO + UX signal) ---
+    pages_with_proper_meta = agg.get("pages_with_proper_meta_desc", 0)
+    total_pages_tracked = agg.get("pages_with_meta_desc", 0)
+    if total_pages_tracked > 0 and pages_with_proper_meta < total_pages_tracked * 0.5:
+        findings.append(f"⚠️  SEO/UX: Only {pages_with_proper_meta}/{total_pages_tracked} pages have proper meta descriptions — limits Google snippet quality.")
+
+    # --- Accessibility signals ---
+    has_heading_structure = any(ps.get("has_h1") for ps in page_signals)
+    if not has_heading_structure:
+        findings.append("⚠️  Accessibility: No H1 headings detected — poor document structure for screen readers.")
+
+    # --- Performance (if PageSpeed available) ---
+    pagespeed = agg.get("homepage_pagespeed", {})
+    if pagespeed and "mobile_score" in pagespeed:
+        mobile_score = pagespeed.get("mobile_score")
+        if mobile_score < 50:
+            findings.append(f"⚠️  Mobile Performance: PageSpeed score is {mobile_score}/100 — poor user experience on mobile.")
+        elif mobile_score < 75:
+            findings.append(f"ℹ️  Mobile Performance: PageSpeed score is {mobile_score}/100 — room for improvement.")
+        else:
+            findings.append(f"✓ Mobile Performance: PageSpeed score is {mobile_score}/100 — good performance.")
+
+    # --- Trust signals in design ---
+    has_credentials = agg.get("has_credentials", False)
+    if has_credentials:
+        findings.append("✓ Credibility: Professional credentials displayed — builds trust.")
+
+    # Default: if no findings, add positive note
+    if not findings:
+        findings.append("ℹ️  No major design/accessibility issues detected from automated analysis.")
+
+    return {
+        "design_flags": findings,
+    }
+
+
+# ===========================================================================
 # SCORING
 # ===========================================================================
 
@@ -3088,6 +3177,24 @@ def print_report(
                 print(line)
 
     # ------------------------------------------------------------------
+    # 3b. DESIGN & ACCESSIBILITY FINDINGS
+    # ------------------------------------------------------------------
+    design_assessment = assess_design_quality(agg, page_signals)
+    print_section("DESIGN & ACCESSIBILITY")
+    for flag in design_assessment.get("design_flags", []):
+        # word-wrap at ~70 chars
+        words = flag.split()
+        line = "  "
+        for word in words:
+            if len(line) + len(word) + 1 > 75:
+                print(line)
+                line = "  " + word + " "
+            else:
+                line += word + " "
+        if line.strip():
+            print(line)
+
+    # ------------------------------------------------------------------
     # 4. PAGE SIGNALS
     # ------------------------------------------------------------------
     print_section("PAGE SIGNALS")
@@ -3146,6 +3253,7 @@ def save_json_report(
     issues: list[dict],
     page_signals: list[dict],
     analyzed_urls: list[str],
+    design_assessment: dict,
 ) -> str:
     """Save the full audit result as a JSON file in outputs/. Returns the file path."""
     out_dir = _ensure_outputs_dir()
@@ -3159,6 +3267,7 @@ def save_json_report(
         "aggregated_signals": agg,
         "scores": scores,
         "priority_issues": issues,
+        "design_and_accessibility": design_assessment,
         "page_signals": page_signals,
         "pages_analyzed": analyzed_urls,
     }
@@ -3548,6 +3657,9 @@ def main():
     # --- Priority Issues ---
     issues = generate_priority_issues(scores)
 
+    # --- Design & Accessibility Assessment ---
+    design_assessment = assess_design_quality(agg, page_signals)
+
     # --- Print Report ---
     print_report(
         url=homepage_url,
@@ -3568,6 +3680,7 @@ def main():
         issues=issues,
         page_signals=page_signals,
         analyzed_urls=analyzed_urls,
+        design_assessment=design_assessment,
     )
 
     # --- Save internal PDF brief ---
