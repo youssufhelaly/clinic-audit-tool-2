@@ -1073,8 +1073,39 @@ def detect_trust_signals(html: str, text: str) -> dict:
     review_count = schema_data.get("review_count")
     most_recent_date = schema_data.get("most_recent_date")
 
-    if rating_value is not None and review_count is not None:
+    # --- 9. Detect false/misleading review claims ---
+    # Check if visible text claims a rating that differs from schema
+    claimed_rating = None
+    has_misleading_claim = False
+
+    # Look for patterns like "5 star", "5-star", "4.9 rating" in visible text
+    rating_patterns = [
+        r'\b(5|4\.9|4\.8)\s*(?:star|rating)(?:\s|$)',  # "5 star rating"
+        r'(?:^|\s)(5|4\.9|4\.8)(?:\s+out\s+of\s+5|/5)',  # "5 out of 5" or "5/5"
+        r'(?:rated|rating).*?\b(5|4\.9|4\.8)\b',  # "rated 5"
+    ]
+    for pattern in rating_patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            claimed_rating = float(match.group(1))
+            break
+
+    # Compare claimed rating to actual schema rating
+    if claimed_rating is not None:
+        if rating_value is None:
+            # Site claims a rating but has NO schema markup — suspicious, likely outdated
+            has_misleading_claim = True
+            details.insert(0, f"⚠️ UNVERIFIED: Site claims {claimed_rating}★ rating but no Google schema data found — claim may be outdated or unverified.")
+        elif abs(claimed_rating - rating_value) >= 0.5:
+            # Claimed and actual differ significantly
+            has_misleading_claim = True
+            details.insert(0, f"⚠️ MISLEADING: Site claims {claimed_rating}★ but Google schema shows {rating_value}★ ({review_count} reviews).")
+        else:
+            # Claims match or are close
+            details.append(f"Google review schema found: {rating_value}★ ({review_count} reviews).")
+    elif rating_value is not None and review_count is not None:
         details.append(f"Google review schema found: {rating_value}★ ({review_count} reviews).")
+
     if most_recent_date:
         details.append(f"Most recent review date in schema: {most_recent_date}.")
 
@@ -1090,6 +1121,8 @@ def detect_trust_signals(html: str, text: str) -> dict:
         "rating_value":            rating_value,
         "review_count":            review_count,
         "most_recent_date":        most_recent_date,
+        "has_misleading_claim":    has_misleading_claim,
+        "claimed_rating":          claimed_rating,
         "details":                 details,
     }
 
@@ -1984,6 +2017,7 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
     best_rating_value = None
     best_review_count = None
     most_recent_review_date = None
+    has_misleading_review_claim = False  # Flag if claimed rating ≠ actual rating
     # Team credibility aggregation
     best_team_member_count = 0
     best_credentialed_count = 0
@@ -2101,6 +2135,9 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
         if ts.get("most_recent_date"):
             if most_recent_review_date is None or ts.get("most_recent_date") > most_recent_review_date:
                 most_recent_review_date = ts.get("most_recent_date")
+        # Track if any page has a misleading review claim
+        if ts.get("has_misleading_claim"):
+            has_misleading_review_claim = True
 
         # Team credibility aggregation
         tc = ps.get("team_credibility", {})
@@ -2214,6 +2251,7 @@ def aggregate_signals(page_signals: list[dict], homepage_url: str) -> dict:
         "best_rating_value": best_rating_value,
         "best_review_count": best_review_count,
         "most_recent_review_date": most_recent_review_date,
+        "has_misleading_review_claim": has_misleading_review_claim,
         "best_team_member_count": best_team_member_count,
         "best_credentialed_count": best_credentialed_count,
         "has_detailed_team_bios": has_detailed_team_bios,
@@ -2624,7 +2662,11 @@ def score_site(agg: dict) -> dict:
             "Verify on Google Maps for most current data."
         )
 
-
+    # --- CRITICAL: Penalize misleading review claims ---
+    has_misleading_claim = agg.get("has_misleading_review_claim", False)
+    if has_misleading_claim:
+        rev_score = max(1, rev_score - 4)  # Severe penalty for false/inflated claims
+        rev_findings.insert(0, "⚠️ CRITICAL: Site displays inaccurate review ratings (claimed vs. actual mismatch). This damages credibility.")
 
     scores["Trust / Reviews"] = rev_score
     findings["Trust / Reviews"] = rev_findings
