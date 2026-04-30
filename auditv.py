@@ -1710,13 +1710,29 @@ def assess_service_presentation(page_signals: list[dict], homepage_url: str) -> 
         path = urlparse(url_norm).path.lower().rstrip("/") or "/"
         is_homepage = (url_norm == homepage_norm)
 
-        # Dedicated sub-pages: path matches /services/<something>, /treatments/<something>, /conditions/<something>, etc.
-        if re.match(r"^/(services?|treatments?|conditions?)/.+", path):
+        # Dedicated sub-pages:
+        # 1. Nested under /services: /services/physiotherapy
+        # 2. Direct service pages: /physiotherapy, /massage-therapy (if detected as having service content)
+        is_nested_service = re.match(r"^/(services?|treatments?|conditions?)/.+", path)
+
+        # Direct service page: path is a single service keyword that matched actual service categories on page
+        is_direct_service = False
+        if not is_homepage and len(ps["service_categories"]) > 0:
+            # Extract path segment: /physiotherapy -> physiotherapy
+            path_segment = path.strip("/").split("/")[0]
+            # Check if this path contains a known service keyword
+            service_keywords = ["physio", "massage", "therapy", "sport", "pool", "chiro", "acupuncture", "treatment", "rehab", "condition"]
+            if any(kw in path_segment for kw in service_keywords):
+                is_direct_service = True
+
+        if is_nested_service or is_direct_service:
             subpages_found.append(ps["url"])
 
         # Identify the root services page vs. sub-pages
         is_services_root = path in ("/services", "/service", "/treatments", "/treatment", "/conditions", "/condition", "/our-treatments", "/our-conditions")
-        is_services_page = any(kw in path for kw in ("service", "treatment", "condition")) and not is_homepage
+
+        # Is this a services-related page? (root OR individual service page)
+        is_services_page = (any(kw in path for kw in ("service", "treatment", "condition")) or is_direct_service) and not is_homepage
 
         if is_homepage:
             homepage_service_count = len(ps["service_categories"])
